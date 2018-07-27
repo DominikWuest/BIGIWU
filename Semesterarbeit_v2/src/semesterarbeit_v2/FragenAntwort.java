@@ -116,4 +116,8 @@ public class FragenAntwort {
             
         }*/
     }
+    
+    void chatPartner(){
+        
+    }
 }
