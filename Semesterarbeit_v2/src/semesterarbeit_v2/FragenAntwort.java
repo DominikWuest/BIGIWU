@@ -23,6 +23,7 @@ public class FragenAntwort {
     private Scanner mEingabe = new Scanner(System.in);
     private String nameUser;
     private String wohlbefindenUser;
+    private String chatUser;
 
     void frageName() {
 
@@ -66,10 +67,12 @@ public class FragenAntwort {
 
         if (mood == false) {
             // positive
-            System.out.println("Positiv");
+            System.out.println("Mein Code hat keine Bugs also"
+                    + "gehts mir auch gut. :) ");
         } else {
             //negative
-            System.out.println("negativ");
+            System.out.println("Schade aber auch das geht vorüber."
+                    + " Think positiv :) ");
         }
         /*
         
@@ -116,9 +119,34 @@ public class FragenAntwort {
             
         }*/
     }
-    
-    void chatPartner(){
-        
-        
+
+    void chatPartner() {
+
+        System.out.println("So an die Arbeit!");
+        System.out.println("Ich kann dir diverse Fragen"
+                + " zum Thema Netzwerk beantworten.");
+        System.out.println("Wie kann ich dir helfen?");
+
+        chatUser = mEingabe.nextLine();
+        String[] words = chatUser.split(" ");
+        String[] binrechnerArray = new String[]{"umrechnen", "binär"};
+        String[] subneting = new String[]{"nicht", "schlecht"};
+
+        for (String word : words) {
+            for (String binrechner : binrechnerArray) {
+                if (word.contains(binrechner)) {
+                    System.out.println("Sehr gut, zum Thema Binär und"
+                            + " und Dezimalrechner kann ich dir Auskunft"
+                            + " geben.");
+                }
+            }
+            for (String subrechner : subneting) {
+                if (word.contains(subrechner)) {
+                    System.out.println("Aber sicher doch. Ich kann dir mit"
+                            + " einem Subnetz und IP Rechner aushelfen.");
+                }
+            }
+        }
+
     }
 }
