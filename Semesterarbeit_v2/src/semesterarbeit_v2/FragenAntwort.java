@@ -129,7 +129,7 @@ public class FragenAntwort {
 
         chatUser = mEingabe.nextLine();
         String[] words = chatUser.split(" ");
-        String[] binrechnerArray = new String[]{"umrechnen", "binär"};
+        String[] binrechnerArray = new String[]{"umrechnen", "binär", "dezimal"};
         String[] subneting = new String[]{"nicht", "schlecht"};
 
         for (String word : words) {

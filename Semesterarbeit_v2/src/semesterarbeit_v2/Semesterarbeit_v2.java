@@ -23,10 +23,12 @@ public class Semesterarbeit_v2 {
         Menu m1 = new Menu();
         FragenAntwort f1 = new FragenAntwort();
         
+        
         // Objekte aufrufen
         b1.botBegruessung();
         f1.frageName();
         f1.frageWohlbefinden();
+        f1.chatPartner();
         //m1.eingabeMenu();
 
     }
