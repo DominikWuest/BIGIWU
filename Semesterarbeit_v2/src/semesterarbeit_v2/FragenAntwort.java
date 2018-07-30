@@ -14,17 +14,18 @@
 Hier wird der eigendliche Chatbot programmiert. Kommunikation
 mit Fragen und Antworten.
  */
-
 package semesterarbeit_v2;
 
 import java.util.Scanner;
 
 public class FragenAntwort {
 
+    BinaerRechner bin1 = new BinaerRechner();
     private Scanner mEingabe = new Scanner(System.in);
     private String nameUser;
     private String wohlbefindenUser;
     private String chatUser;
+    
 
     void frageName() {
 
@@ -68,8 +69,8 @@ public class FragenAntwort {
 
         if (mood == false) {
             // positive
-            System.out.println("Mein Code hat keine Bugs also"
-                    + "gehts mir auch gut. :) ");
+            System.out.println("Gut zu hören " + nameUser + ". Mein Code hat keine Bugs also"
+                    + " gehts mir gut. :) ");
         } else {
             //negative
             System.out.println("Schade aber auch das geht vorüber."
@@ -127,24 +128,36 @@ public class FragenAntwort {
         System.out.println("Ich kann dir diverse Fragen"
                 + " zum Thema Netzwerk beantworten.");
         System.out.println("Wie kann ich dir helfen?");
+        System.out.println("Ich kann dir auch ein Auflistung mit den mir"
+                + " bekannten Themen geben.");
+        System.out.println("Sag dafür nur Thema.");
 
         chatUser = mEingabe.nextLine();
         String[] words = chatUser.split(" ");
-        String[] binrechnerArray = new String[]{"umrechnen", "binär", "dezimal"};
-        String[] subneting = new String[]{"nicht", "schlecht"};
+        String[] binrechnerArray = new String[]{"umrechnen", "binaer", "binär", "dezimal"};
+        String[] subnetingArray = new String[]{"Subnetz", "IP", "IP Adresse", "Gateway", "Broadcast"};
+        String[] themaArray = new String[]{"thema"};
 
         for (String word : words) {
             for (String binrechner : binrechnerArray) {
                 if (word.contains(binrechner)) {
-                    System.out.println("Sehr gut, zum Thema Binär und"
+                    System.out.println("Sehr gut, zum Thema Binaer und"
                             + " und Dezimalrechner kann ich dir Auskunft"
                             + " geben.");
                 }
             }
-            for (String subrechner : subneting) {
+            for (String subrechner : subnetingArray) {
                 if (word.contains(subrechner)) {
                     System.out.println("Aber sicher doch. Ich kann dir mit"
                             + " einem Subnetz und IP Rechner aushelfen.");
+                }
+            }
+
+            for (String thema : themaArray) {
+                if (word.contains(thema)) {
+                    System.out.println("Alles klar.");
+                    
+
                 }
             }
         }
