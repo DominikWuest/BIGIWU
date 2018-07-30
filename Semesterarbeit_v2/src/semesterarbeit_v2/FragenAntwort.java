@@ -15,7 +15,6 @@ Hier wird der eigendliche Chatbot programmiert. Kommunikation
 mit Fragen und Antworten.
  */
 
-// Test Marek
 package semesterarbeit_v2;
 
 import java.util.Scanner;
