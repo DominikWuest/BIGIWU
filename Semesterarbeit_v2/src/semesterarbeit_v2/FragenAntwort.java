@@ -21,6 +21,7 @@ import java.util.Scanner;
 public class FragenAntwort {
 
     BinaerRechner bin1 = new BinaerRechner();
+    // SubnetRechner sub1 = new SubnetRechner();
     private Scanner mEingabe = new Scanner(System.in);
     private String nameUser;
     private String wohlbefindenUser;
@@ -36,6 +37,7 @@ public class FragenAntwort {
 
         System.out.println("Dein Name lautet also " + nameUser + ".");
         System.out.println("Naja meiner ist ja auch nicht besser...");
+        
 
     }
 
@@ -76,6 +78,16 @@ public class FragenAntwort {
             System.out.println("Schade aber auch das geht vorüber."
                     + " Think positiv :) ");
         }
+        
+        System.out.println("So an die Arbeit!");
+        System.out.println("Ich kann dir diverse Fragen"
+                + " zum Thema Netzwerk beantworten.");
+        System.out.println("Wie kann ich dir helfen?");
+        System.out.println("Ich kann dir auch ein Auflistung mit den mir"
+                + " bekannten Themen geben.");
+        System.out.println("Sag dafür nur Thema.");
+        
+        
         /*
         
         Boolean hasPositives;
@@ -124,14 +136,6 @@ public class FragenAntwort {
 
     void chatPartner() {
 
-        System.out.println("So an die Arbeit!");
-        System.out.println("Ich kann dir diverse Fragen"
-                + " zum Thema Netzwerk beantworten.");
-        System.out.println("Wie kann ich dir helfen?");
-        System.out.println("Ich kann dir auch ein Auflistung mit den mir"
-                + " bekannten Themen geben.");
-        System.out.println("Sag dafür nur Thema.");
-
         chatUser = mEingabe.nextLine();
         String[] words = chatUser.split(" ");
         String[] binrechnerArray = new String[]{"umrechnen", "binaer", "binär", "dezimal"};
@@ -144,20 +148,51 @@ public class FragenAntwort {
                     System.out.println("Sehr gut, zum Thema Binaer und"
                             + " und Dezimalrechner kann ich dir Auskunft"
                             + " geben.");
+                    binrechnerMenu();
                 }
             }
             for (String subrechner : subnetingArray) {
                 if (word.contains(subrechner)) {
-                    System.out.println("Aber sicher doch. Ich kann dir mit"
+                    System.out.println("Aber sicher doch " + nameUser + ". Ich kann dir mit"
                             + " einem Subnetz und IP Rechner aushelfen.");
                 }
             }
 
             for (String thema : themaArray) {
                 if (word.contains(thema)) {
-                    System.out.println("Alles klar.");
+                    System.out.println("Alles klar " + nameUser + ".");
                     
 
+                }
+            }
+        }
+
+    }
+    
+    void binrechnerMenu() {
+
+        System.out.println("Für den Binärrechner gibt es 2 Modi.");
+        System.out.println("Einmal von Binär nach Dezimal und Dezimal zu"
+                + " Binär.");
+        System.out.println("Welchen darf ich für dich starten?");
+        chatUser = mEingabe.nextLine();
+        String[] words = chatUser.split(" ");
+        String[] binDezArray = new String[]{"binär zu dezimal"};
+        String[] dezBinArray = new String[]{"dezimal zu binär"};
+
+        for (String word : words) {
+            for (String binDezRechner : binDezArray) {
+                if (word.contains(binDezRechner)) {
+                    System.out.println("Ich starte für dich den Binär zu "
+                            + "Dezimal Rechner");
+                    bin1.bintoDezRechner();
+                }
+            }
+            for (String dezBinRechner : dezBinArray) {
+                if (word.contains(dezBinRechner)) {
+                    System.out.println("Ich starte für dich den Dezimal zu "
+                            + "Binär Rechner");
+                    bin1.deztoBinRechner();
                 }
             }
         }

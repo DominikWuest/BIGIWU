@@ -36,7 +36,7 @@ public class BinaerRechner {
         //Abfrage zum beenden bei Eingabe 0
         // Zum Beenden 9 
         System.out.println("Zum beenden drücke 9");
-        System.out.println("Bitte geben Sie einen binären String ein:");
+        System.out.println("Bitte gebe einen binären String ein:");
         bitstring = eingabe.nextLine();
         //Bitlänge zählen
 
