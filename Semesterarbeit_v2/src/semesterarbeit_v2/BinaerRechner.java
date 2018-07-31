@@ -19,38 +19,35 @@ import java.util.Scanner;
 
 public class BinaerRechner {
 
-    Scanner eingabe = new Scanner(System.in);
+    Scanner mEingabeZahl = new Scanner(System.in);
     Scanner beenden = new Scanner(System.in);
-    
-    
+    Scanner mEingabeAuswahl = new Scanner (System.in);
 
     int auswahl;
     int binaerzahl1;
     long binaerzahl2;
     int binaerausgabe;
     String bitstring;
+    String auswahlString;
+    Boolean weiterMachen = true;
 
     void bintoDezRechner() {
 
-        Boolean weiterMachen = true;
-        //Abfrage zum beenden bei Eingabe 0
-        // Zum Beenden 9 
-
-        bitstring = eingabe.nextLine();
         //Bitlänge zählen
-        while (weiterMachen == true) {
+        do {
 
             System.out.println("Zum beenden des Rechners sag einfach Beenden :) ");
             System.out.println("Bitte gebe einen binären String ein:");
-            
+
+            bitstring = mEingabeZahl.nextLine();
             // Länge prüfen, falls nicht 32-Bit Fehler melden
             // falls 0 = Positive Zahl
-            
+
             if (bitstring.startsWith("0")) {
                 // Bitstring aus Zahl erstellen
                 binaerzahl1 = Integer.parseInt(bitstring, 2);
                 System.out.println("Die Zahl lautet Dezimal: ");
-                System.out.print(binaerzahl1);
+                System.out.println(binaerzahl1);
 
             } else if (bitstring.startsWith("1")) {
 
@@ -58,27 +55,57 @@ public class BinaerRechner {
                 //Casting
                 binaerausgabe = (int) binaerzahl2;
                 System.out.println("Die Zahl lautet Dezimal: ");
-                System.out.print(binaerausgabe);
+                System.out.println(binaerausgabe);
 
             } else if (bitstring.contains("beenden")) {
-                System.out.println("Ich beende den Rechner für dich");
-                
+                System.out.println("Ich beende den Rechner für dich.");
+                weiterMachen = false;
+
             }
 
-        }
+        } while (weiterMachen == true);
     }
 
     void deztoBinRechner() {
 
-        int dezstring;
-        System.out.println("Bitte gebe eine Dezimale Zahl ein:");
-        dezstring = eingabe.nextInt();
-        System.out.println("Deine Zahl lautet in der Binären Schreibweise: ");
-        System.out.print(Integer.toBinaryString(dezstring));
+        do {
+
+            int dezstring;
+            System.out.println("Bitte gebe eine Dezimale Zahl ein:");
+            dezstring = mEingabeZahl.nextInt();
+            System.out.println("Deine Zahl lautet in der Binären Schreibweise: ");
+            System.out.println(Integer.toBinaryString(dezstring));
+            System.out.println("Möchtest du weiter machen oder den Rechner beenden?");
+            
+            auswahlString = mEingabeAuswahl.nextLine();
+            String[] words = auswahlString.split(" ");
+            String[] weiterArray = new String[]{"weiter", "weitermachen", "naechste", "Zahl", "nochmals"};
+            String[] beendenArray = new String[]{"beenden", "fertig", "nicht", "schliesse"};
+            
+            for (String word : words){
+                for (String weiterMachen : weiterArray ){
+                    if (word.contains(weiterMachen)) {
+                        System.out.println("Ok.");
+                    }
+                }
+                for (String beendenRechner : beendenArray ){
+                    if (word.contains(beendenRechner)) {
+                        System.out.println("Ich beende den Rechner für dich.");
+                        weiterMachen = false;
+                        
+                        
+                    }
+                }
+                
+            }
+            
+
+        } while (weiterMachen == true);
 
     }
 
-    private void beendenBintoDezRechner() {
+    // WIRD NICHT MEHR VERWENDET
+    /* private void beendenBintoDezRechner() {
 
         System.out.println();
         System.out.println("Zum fohrtfahren wähle 0, "
@@ -95,5 +122,5 @@ public class BinaerRechner {
         }
 
     }
-
+     */
 }
