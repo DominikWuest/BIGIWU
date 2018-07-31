@@ -20,7 +20,7 @@ public class Semesterarbeit_v2 {
         // Objekte aus Klassen erstellen
         
         Begruessung b1 = new Begruessung();
-        Menu m1 = new Menu();
+        //Menu m1 = new Menu();
         FragenAntwort f1 = new FragenAntwort();
         
         
@@ -28,7 +28,10 @@ public class Semesterarbeit_v2 {
         b1.botBegruessung();
         f1.frageName();
         f1.frageWohlbefinden();
-        f1.chatPartner();
+        while (true) {            
+            f1.chatPartner();
+        }
+        
         //m1.eingabeMenu();
 
     }
