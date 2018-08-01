@@ -146,9 +146,10 @@ public class FragenAntwort {
 
             chatUser = mEingabe.nextLine();
             String[] words = chatUser.split(" ");
-            String[] binrechnerArray = new String[]{"umrechnen", "binaer", "binär", "dezimal"};
+            String[] binrechnerArray = new String[]{"umrechnen", "binaer", "binaer", "dezimal"};
             String[] subnetingArray = new String[]{"Subnetz", "IP", "IP Adresse", "Gateway", "Broadcast"};
-            String[] themaArray = new String[]{"thema", "was kannst du zeigen", "was weisst"};
+            String[] themaArray = new String[]{"thema", "wissen", "weisst", "sagen"};
+            String[] beendenArray = new String[]{"fertig", "exit", "quit", "cancel", "schluss", "schliessen", "schliesse", "aufhoeren", "beenden"};
 
             for (String word : words) {
                 for (String binrechner : binrechnerArray) {
@@ -171,6 +172,15 @@ public class FragenAntwort {
                     if (word.contains(thema)) {
                         System.out.println("Alles klar " + nameUser + ".");
                         System.out.println("Ich kann dir zu folgenden Themen Auskunft geben.");
+
+                    }
+                }
+                for (String beenden : beendenArray) {
+                    if (word.contains(beenden)) {
+                        System.out.println("Ich hoffe ich konnte dir helfen " + nameUser + ".");
+                        System.out.println("Ich schliesse mich nun für dich.");
+                        System.out.println("Bye bye!");
+                        System.exit(0);
 
                     }
                 }

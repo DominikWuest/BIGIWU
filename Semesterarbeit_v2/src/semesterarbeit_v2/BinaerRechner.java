@@ -32,11 +32,12 @@ public class BinaerRechner {
     Boolean weiterMachen = true;
 
     void bintoDezRechner() {
-
+        
+        System.out.println("Zum beenden des Rechners sag einfach Beenden :) ");
         //Bitlänge zählen
         do {
 
-            System.out.println("Zum beenden des Rechners sag einfach Beenden :) ");
+            
             System.out.println("Bitte gebe einen binären String ein:");
 
             bitstring = mEingabeZahl.nextLine();
@@ -57,10 +58,28 @@ public class BinaerRechner {
                 System.out.println("Die Zahl lautet Dezimal: ");
                 System.out.println(binaerausgabe);
 
-            } else if (bitstring.contains("beenden")) {
-                System.out.println("Ich beende den Rechner für dich.");
-                weiterMachen = false;
-
+            } 
+            System.out.println("Möchtest du weiter machen oder den Rechner beenden?");
+            auswahlString = mEingabeAuswahl.nextLine();
+            String[] words = auswahlString.split(" ");
+            String[] weiterArray = new String[]{"weiter", "weitermachen", "naechste", "Zahl", "nochmals"};
+            String[] beendenArray = new String[]{"beenden", "fertig", "nicht", "schliesse"};
+            
+            for (String word : words){
+                for (String weiterMachen : weiterArray ){
+                    if (word.contains(weiterMachen)) {
+                        System.out.println("Ok.");
+                    }
+                }
+                for (String beendenRechner : beendenArray ){
+                    if (word.contains(beendenRechner)) {
+                        System.out.println("Ich beende den Rechner für dich.");
+                        weiterMachen = false;
+                        
+                        
+                    }
+                }
+                
             }
 
         } while (weiterMachen == true);
