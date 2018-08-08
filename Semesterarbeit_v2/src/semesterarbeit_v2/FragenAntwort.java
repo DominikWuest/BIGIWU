@@ -195,10 +195,27 @@ public class FragenAntwort {
                     System.out.println("Wi-Fi ist ein für Vermarktungszwecke erfundener Kunstbegriff,");
                     System.out.println("der in Analogie zu Hi-Fi gebildet wurde.");
                     System.out.println("Er diente dafür um das freie WLAN attraktiv zu vermarkten.");
-                           
 
                 }
             }
+            
+            //TEST CODE Google Search Auslagern in eigene Klasse
+            /*for (String google : googleArray) {
+                if (word.contains(google)) {
+                    System.out.println("Google Search");
+
+                    String question = "what is this?";
+
+                    question = question.replace(' ', '+');
+
+                    try {
+                        Runtime.getRuntime().exec(new String[]{"cmd", "/c", "start chrome https://www.google.com/search?q=" + question});
+                    } catch (Exception e) {
+
+                    }
+
+                }
+            }*/
             for (String beenden : beendenArray) {
                 if (word.contains(beenden)) {
                     System.out.println("Ich hoffe ich konnte dir helfen " + nameUser + ".");
