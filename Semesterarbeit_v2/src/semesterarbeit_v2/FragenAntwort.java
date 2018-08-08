@@ -149,7 +149,8 @@ public class FragenAntwort {
         String[] themaArray = new String[]{"thema", "wissen", "weisst", "sagen"};
         String[] beendenArray = new String[]{"fertig", "exit", "quit", "cancel", "schluss", "schliessen", "schliesse", "aufhoeren", "beenden"};
         String[] wlanArray = new String[]{"wifi", "wlan", "ghz", "drathlos"};
-
+        String[] nameArray = new String[]{"name", "heisst"};
+        
         for (String word : words) {
             for (String binrechner : binrechnerArray) {
                 if (word.contains(binrechner)) {
@@ -196,6 +197,15 @@ public class FragenAntwort {
                     System.out.println("der in Analogie zu Hi-Fi gebildet wurde.");
                     System.out.println("Er diente dafür um das freie WLAN attraktiv zu vermarkten.");
 
+                }
+            }
+            
+            for (String nameBot : nameArray) {
+                if (word.contains(nameBot)) {
+                    System.out.println("Mein Name ist BiGiWu.");
+                    System.out.println("Du musst wissen " + nameUser + ", diesen Namen habe ich von meinen Erfindern erhalten.");
+                    System.out.println("Er setzt sich aus den Anfangsbuchstaben meiner Erfinder zusammen.");
+                    System.out.println("Diese heissen Binda, Giesen und Wuest.");
                 }
             }
             
