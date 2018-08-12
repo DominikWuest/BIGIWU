@@ -22,6 +22,8 @@ public class FragenAntwort {
 
     BinaerRechner bin1 = new BinaerRechner();
     SubnetRechner sub1 = new SubnetRechner();
+    Topologien top1 = new Topologien();
+    
     // SubnetRechner sub1 = new SubnetRechner();
     private Scanner mEingabe = new Scanner(System.in);
     private String nameUser;
@@ -144,18 +146,19 @@ public class FragenAntwort {
 
         chatUser = mEingabe.nextLine();
         String[] words = chatUser.split(" ");
-        String[] binrechnerArray = new String[]{"umrechnen", "binaer", "dezimal", "rechner"};
-        String[] subnetingArray = new String[]{"Subnetz", "IP", "IP Adresse", "Gateway", "Broadcast"};
+        String[] binrechnerArray = new String[]{"umrechnen", "binaer", "dezimal", "rechner", "rechnen", "eins", "nullen"};
+        String[] subnetingArray = new String[]{"subnetz", "ip", "adresse", "gateway", "broadcast"};
         String[] themaArray = new String[]{"thema", "wissen", "weisst", "sagen"};
         String[] beendenArray = new String[]{"fertig", "exit", "quit", "cancel", "schluss", "schliessen", "schliesse", "aufhoeren", "beenden"};
         String[] wlanArray = new String[]{"wifi", "wlan", "ghz", "drathlos"};
         String[] nameArray = new String[]{"name", "heisst"};
+        String[] topologieArray = new String[]{"topologie", "stern", "daisychain", "bus", "mesh", "line", "zusammenschliessen", "token", "ring", "tokenring", "tree"};
         
         for (String word : words) {
             for (String binrechner : binrechnerArray) {
                 if (word.contains(binrechner)) {
                     System.out.println("Sehr gut, zum Thema Binaer und"
-                            + " und Dezimalrechner kann ich dir Auskunft"
+                            + " Dezimalrechner kann ich dir Auskunft"
                             + " geben " + nameUser + ".");
                     binrechnerMenu();
                 }
@@ -167,11 +170,17 @@ public class FragenAntwort {
                     // HIER SUBNET RECHNER INTEGRIEREN
                 }
             }
+            for (String topologien : topologieArray) {
+                if (word.contains(topologien)) {
+                    top1.detailiertTopologien();
+                    
+                }
+            }
 
             for (String thema : themaArray) {
                 if (word.contains(thema)) {
                     System.out.println("Alles klar " + nameUser + ".");
-                    System.out.println("Da ich leider noch keinen Zugriff zum Internet habe ist meine Auswahl beschränkt. "
+                    System.out.println("Da ich leider noch keinen Zugriff zum Internet habe ist meine Auswahl beschränkt."
                             + " Aber zu diesen Themen kann ich dir helfen.");
                     System.out.println("-------------------");
                     System.out.println("Netzwerk Generell--");
