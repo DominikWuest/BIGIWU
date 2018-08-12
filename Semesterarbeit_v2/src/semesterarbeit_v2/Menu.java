@@ -17,6 +17,9 @@ package semesterarbeit_v2;
 
 import java.util.Scanner;
 
+
+// DIESE KLASSE WIRD NICHT MEHR BENÖTIGT!!!!
+// WIRD SPÄTER GELÖSCHT!!!
 public class Menu {
 
     private Scanner mEingabe = new Scanner(System.in);
