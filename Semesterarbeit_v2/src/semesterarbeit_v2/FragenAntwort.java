@@ -159,7 +159,7 @@ public class FragenAntwort {
         String[] words = chatUser.split(" ");
         String[] binrechnerArray = new String[]{"umrechnen", "binaer", "dezimal", "rechner", "rechnen", "eins", "nullen"};
         String[] subnetingArray = new String[]{"subnetz", "ip", "adresse", "gateway", "broadcast"};
-        String[] themaArray = new String[]{"thema", "wissen", "weisst", "sagen"};
+        String[] themaArray = new String[]{"thema", "katalog"};
         String[] firewallArray = new String[]{"firewall", "ports", "trunk", "sicherheit", "blockieren"};
         String[] wlanArray = new String[]{"wifi", "wlan", "ghz", "drathlos"};
         String[] nameArray = new String[]{"name", "heisst", "gigachatbot3000", "bigiwu"};
@@ -172,7 +172,7 @@ public class FragenAntwort {
         String[] wetterArray = new String[]{"wetter", "sonne", "regen", "schnee", "kalt", "warm", "regenschirm", "jacke", "schneit", "regnet"};
         String[] wohlbefindenBotArray = new String[]{"geht", "fuehlst"};
         String[] witzArray = new String[]{"witz", "lustig", "lachen"};
-        String[] infoArray = new String[]{"urheber", "copyright", "impressum", "about"};
+        String[] infoArray = new String[]{"urheber", "copyright", "impressum", "about", "dich"};
 
         for (String word : words) {
             for (String binrechner : binrechnerArray) {
@@ -237,7 +237,7 @@ public class FragenAntwort {
             }
             for (String firewall : firewallArray) {
                 if (word.contains(firewall)) {
-                    System.out.println("The Stage is on Fire!" + nameUser + " das weiss ich zur Firewall.");
+                    System.out.println("The Stage is on Fire! " + nameUser + " das weiss ich zur Firewall.");
                     firewall1.detailiertFirewall();
 
                 }

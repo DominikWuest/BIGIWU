@@ -123,23 +123,4 @@ public class BinaerRechner {
 
     }
 
-    // WIRD NICHT MEHR VERWENDET
-    /* private void beendenBintoDezRechner() {
-
-        System.out.println();
-        System.out.println("Zum fohrtfahren wähle 0, "
-                + "zum Beenden wähle 1");
-        auswahl = beenden.nextInt();
-
-        if (auswahl == 0) {
-            bintoDezRechner();
-
-        } else if (auswahl == 1) {
-            System.out.println("Der Rechner wird beendet");
-            System.out.println("Du kommst zurück zum Menü");
-
-        }
-
-    }
-     */
 }
