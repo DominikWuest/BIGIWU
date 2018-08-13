@@ -22,7 +22,8 @@ public class Wetter {
 
     void detailiertWetter() {
 
-        System.out.println("Da ich auf deinem Notebook gefangen bin, starte ich für dich eine Suche bei Google.");
+        System.out.println("Da ich auf deinem Notebook gefangen bin, "
+                + "starte ich für dich eine Suche bei Google.");
         try {
             Thread.sleep(5000);
         } catch (InterruptedException ex) {

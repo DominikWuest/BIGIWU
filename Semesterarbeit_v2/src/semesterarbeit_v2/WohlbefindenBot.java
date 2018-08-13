@@ -21,8 +21,8 @@ public class WohlbefindenBot {
         System.out.println("Wie es mir geht?");
         System.out.println("Naja ich bin bugfrei, compiliert und am laufen.");
         System.out.println("Also kann ich mich nicht beklagen.");
-        System.out.println("Du könntest aber mal etwas mehr RAM einbauen. Dann wäre ich noch flotter. ;) ");
-        
+        System.out.println("Du könntest aber mal etwas mehr RAM einbauen.");
+        System.out.println("Dann wäre ich noch flotter. ;) ");
     }
     
 }

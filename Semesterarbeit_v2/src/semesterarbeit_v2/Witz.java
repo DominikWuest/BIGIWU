@@ -20,9 +20,13 @@ public class Witz {
     void witzeSammlung(){
         
         System.out.println("Zwei Jäger treffen sich.");
-        System.out.println("Was ist grün und auf Knopfdruck rot? \nEin Frosch in einem Mixer.");
-        System.out.println("Ich konnte es nicht fassen. Mein Nachbar hat tatsächlich noch um 3 Uhr Nachts bei uns geklingelt. \nMir wäre fast die Bohrmaschine runtergefallen.");
-        System.out.println("Berühmte letzte Worte eines Fallschirmspringers \nImmer diese blöden Motten.");
+        System.out.println("Was ist grün und auf Knopfdruck rot? "
+                + "\nEin Frosch in einem Mixer.");
+        System.out.println("Ich konnte es nicht fassen. Mein Nachbar hat "
+                + "tatsächlich noch um 3 Uhr Nachts bei uns geklingelt. "
+                + "\nMir wäre fast die Bohrmaschine runtergefallen.");
+        System.out.println("Berühmte letzte Worte eines Fallschirmspringers. "
+                + "\nImmer diese blöden Motten.");
     }
     
 }

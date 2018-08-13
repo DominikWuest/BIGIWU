@@ -18,7 +18,8 @@ package semesterarbeit_v2;
 public class Thema {
 
     void detailiertThema() {
-        System.out.println("Da ich leider noch keinen Zugriff zum Internet habe ist meine Auswahl beschränkt.");
+        System.out.println("Da ich leider noch keinen Zugriff zum Internet "
+                + "habe ist meine Auswahl beschränkt.");
         System.out.println("Aber zu diesen Themen kann ich dir helfen.");
         
         System.out.println("-------------------");
@@ -33,7 +34,8 @@ public class Thema {
         System.out.println("LAN----------------");
         System.out.println("-------------------");
         
-        System.out.println("Und vieleicht noch etwas mehr frag mich doch einfach :) ");
+        System.out.println("Und vieleicht noch etwas mehr frag mich "
+                + "doch einfach :) ");
     }
 
 }
