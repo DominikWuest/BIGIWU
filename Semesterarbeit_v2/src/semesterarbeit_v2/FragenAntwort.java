@@ -23,8 +23,16 @@ public class FragenAntwort {
     BinaerRechner bin1 = new BinaerRechner();
     SubnetRechner sub1 = new SubnetRechner();
     Topologien top1 = new Topologien();
-    
-    // SubnetRechner sub1 = new SubnetRechner();
+    Lan lan1 = new Lan();
+    Wlan wlan1 = new Wlan();
+    Firewall firewall1 = new Firewall();
+    Switch switch1 = new Switch();
+    Router router1 = new Router();
+    Thema thema1 = new Thema();
+    Network network1 = new Network();
+    Name name1 = new Name();
+    Wetter wetter1 = new Wetter();
+
     private Scanner mEingabe = new Scanner(System.in);
     private String nameUser;
     private String wohlbefindenUser;
@@ -149,11 +157,17 @@ public class FragenAntwort {
         String[] binrechnerArray = new String[]{"umrechnen", "binaer", "dezimal", "rechner", "rechnen", "eins", "nullen"};
         String[] subnetingArray = new String[]{"subnetz", "ip", "adresse", "gateway", "broadcast"};
         String[] themaArray = new String[]{"thema", "wissen", "weisst", "sagen"};
-        String[] beendenArray = new String[]{"fertig", "exit", "quit", "cancel", "schluss", "schliessen", "schliesse", "aufhoeren", "beenden"};
+        String[] firewallArray = new String[]{"firewall", "ports", "trunk", "sicherheit", "blockieren"};
         String[] wlanArray = new String[]{"wifi", "wlan", "ghz", "drathlos"};
-        String[] nameArray = new String[]{"name", "heisst"};
+        String[] nameArray = new String[]{"name", "heisst", "gigachatbot3000", "bigiwu"};
         String[] topologieArray = new String[]{"topologie", "stern", "daisychain", "bus", "mesh", "line", "zusammenschliessen", "token", "ring", "tokenring", "tree"};
-        
+        String[] lanArray = new String[]{"lan", "ethernet", "cat", "drahtgebundene", "patch"};
+        String[] switchArray = new String[]{"switch", "ports", "ethernetconnection", "verbindung"};
+        String[] beendenArray = new String[]{"fertig", "exit", "quit", "cancel", "schluss", "schliessen", "schliesse", "aufhoeren", "beenden"};
+        String[] routerArray = new String[]{"router", "internetverbindung", "internet", "anbieter", "provider"};
+        String[] networkArray = new String[]{"netzwerk", "network", "generell", "allgemein", "erklaerung"};
+        String[] wetterArray = new String[]{"wetter", "sonne", "regen", "schnee", "kalt", "warm", "heiss", "regenschirm", "jacke"};
+
         for (String word : words) {
             for (String binrechner : binrechnerArray) {
                 if (word.contains(binrechner)) {
@@ -161,6 +175,14 @@ public class FragenAntwort {
                             + " Dezimalrechner kann ich dir Auskunft"
                             + " geben " + nameUser + ".");
                     binrechnerMenu();
+                }
+            }
+            for (String network : networkArray) {
+                if (word.contains(network)) {
+                    System.out.println("Eine generelle kurze Erklärung?");
+                    System.out.println("Aber sicher doch " + nameUser + ".");
+                    network1.detaliertNetwork();
+
                 }
             }
             for (String subrechner : subnetingArray) {
@@ -172,53 +194,84 @@ public class FragenAntwort {
             }
             for (String topologien : topologieArray) {
                 if (word.contains(topologien)) {
+                    System.out.println("Das Thema Topologie finde ich auch spannend " + nameUser + ".");
+                    System.out.println("Hier meine Zusammenfassung.");
                     top1.detailiertTopologien();
-                    
+
                 }
             }
+            for (String lan : lanArray) {
+                if (word.contains(lan)) {
+                    System.out.println("Classic. Lass mir dir LAN erklären " + nameUser + ".");
+                    lan1.detailiertLan();
 
+                }
+            }
+            for (String firewall : firewallArray) {
+                if (word.contains(firewall)) {
+                    System.out.println("The Stage is on Fire!" + nameUser + " das weiss ich zur Firewall.");
+                    firewall1.detailiertFirewall();
+
+                }
+            }
+            for (String switchWord : switchArray) {
+                if (word.contains(switchWord)) {
+                    System.out.println(nameUser + " zu Switchen weiss ich so einiges.");
+                    switch1.detailiertSwitch();
+
+                }
+            }
+            for (String router : routerArray) {
+                if (word.contains(router)) {
+                    System.out.println("Fragen zum Wunderkasten, welcher Internet ins Haus bringt?");
+                    System.out.println("Die kann ich dir beantworten " + nameUser + ".");
+                    router1.detailiertRouter();
+
+                }
+            }
             for (String thema : themaArray) {
                 if (word.contains(thema)) {
                     System.out.println("Alles klar " + nameUser + ".");
-                    System.out.println("Da ich leider noch keinen Zugriff zum Internet habe ist meine Auswahl beschränkt."
-                            + " Aber zu diesen Themen kann ich dir helfen.");
-                    System.out.println("-------------------");
-                    System.out.println("Netzwerk Generell--");
-                    System.out.println("Subnetzrechner-----");
-                    System.out.println("Topologien---------");
-                    System.out.println("Binärrechner-------");
-                    System.out.println("Firewall-----------");
-                    System.out.println("Switches-----------");
-                    System.out.println("Router-------------");
-                    System.out.println("WLAN---------------");
-                    System.out.println("LAN----------------");
-                    System.out.println("-------------------");
-                    System.out.println("Und vieleicht noch etwas mehr frag mich doch einfach :) ");
+                    thema1.detailiertThema();
 
                 }
             }
             for (String wlan : wlanArray) {
                 if (word.contains(wlan)) {
-                    System.out.println("WLAN steht für Wireless Local Area Network.");
-                    System.out.println("Hiermit ist eine 2.4 GHZ oder 5 GHZ Funkverbindung gemeint, mit welcher Internet ohne");
-                    System.out.println("auf ein Kabel angewiesen zu sein zu einem Gerät übertragen werden kann.");
-                    System.out.println("Wi-Fi ist ein für Vermarktungszwecke erfundener Kunstbegriff,");
-                    System.out.println("der in Analogie zu Hi-Fi gebildet wurde.");
-                    System.out.println("Er diente dafür um das freie WLAN attraktiv zu vermarkten.");
+                    System.out.println("Zum Thema WLAN kann ich dir helfen " + nameUser + ".");
+                    wlan1.detailiertWlan();
 
                 }
             }
-            
+
             for (String nameBot : nameArray) {
                 if (word.contains(nameBot)) {
-                    System.out.println("Mein Name ist BiGiWu.");
-                    System.out.println("Du musst wissen " + nameUser + ", diesen Namen habe ich von meinen Erfindern erhalten.");
-                    System.out.println("Er setzt sich aus den Anfangsbuchstaben meiner Erfinder zusammen.");
-                    System.out.println("Diese heissen Binda, Giesen und Wuest.");
+                    System.out.println("Jaa jaaa " + nameUser + ". Wiedermal fragen zu meinen Namen. ;) ");
+                    name1.detailiertName();
                 }
             }
             
-            //TEST CODE Google Search Auslagern in eigene Klasse
+            for (String wetter : wetterArray) {
+                if (word.contains(wetter)) {
+                    System.out.println(nameUser + " hast du keine Fenster bei dir?");
+                    System.out.println("Aber ja ich kann dir sagen wie das Wetter heute sein wird. Fast so gut wie Siri.");
+                    wetter1.detailiertWetter();
+                    
+                }
+            }
+
+            
+            for (String beenden : beendenArray) {
+                if (word.contains(beenden)) {
+                    System.out.println("Ich hoffe ich konnte dir helfen " + nameUser + ".");
+                    System.out.println("Ich schliesse mich nun für dich.");
+                    System.out.println("Bye bye!");
+                    System.exit(0);
+
+                }
+            }
+        }
+        //TEST CODE Google Search Auslagern in eigene Klasse
             /*for (String google : googleArray) {
                 if (word.contains(google)) {
                     System.out.println("Google Search");
@@ -235,16 +288,6 @@ public class FragenAntwort {
 
                 }
             }*/
-            for (String beenden : beendenArray) {
-                if (word.contains(beenden)) {
-                    System.out.println("Ich hoffe ich konnte dir helfen " + nameUser + ".");
-                    System.out.println("Ich schliesse mich nun für dich.");
-                    System.out.println("Bye bye!");
-                    System.exit(0);
-
-                }
-            }
-        }
 
     }
 
