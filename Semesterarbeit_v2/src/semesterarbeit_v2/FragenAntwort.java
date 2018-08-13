@@ -167,6 +167,9 @@ public class FragenAntwort {
         String[] routerArray = new String[]{"router", "internetverbindung", "internet", "anbieter", "provider"};
         String[] networkArray = new String[]{"netzwerk", "network", "generell", "allgemein", "erklaerung"};
         String[] wetterArray = new String[]{"wetter", "sonne", "regen", "schnee", "kalt", "warm", "regenschirm", "jacke"};
+        String[] wohlbefindenBotArray = new String[]{"geht"};
+        String[] witzArray = new String[]{"witz", "lustig", "lachen"};
+        String[] infoArray = new String[]{"urheber", "copyright", "impressum", "about"};
 
         for (String word : words) {
             for (String binrechner : binrechnerArray) {
