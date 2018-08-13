@@ -32,6 +32,9 @@ public class FragenAntwort {
     Network network1 = new Network();
     Name name1 = new Name();
     Wetter wetter1 = new Wetter();
+    WohlbefindenBot wohlbefindenBot1 = new WohlbefindenBot();
+    Witz witz1 = new Witz();
+    Impressum impressum1 = new Impressum();
 
     private Scanner mEingabe = new Scanner(System.in);
     private String nameUser;
@@ -166,8 +169,8 @@ public class FragenAntwort {
         String[] beendenArray = new String[]{"fertig", "exit", "quit", "cancel", "schluss", "schliessen", "schliesse", "aufhoeren", "beenden"};
         String[] routerArray = new String[]{"router", "internetverbindung", "internet", "anbieter", "provider"};
         String[] networkArray = new String[]{"netzwerk", "network", "generell", "allgemein", "erklaerung"};
-        String[] wetterArray = new String[]{"wetter", "sonne", "regen", "schnee", "kalt", "warm", "regenschirm", "jacke"};
-        String[] wohlbefindenBotArray = new String[]{"geht"};
+        String[] wetterArray = new String[]{"wetter", "sonne", "regen", "schnee", "kalt", "warm", "regenschirm", "jacke", "schneit", "regnet"};
+        String[] wohlbefindenBotArray = new String[]{"geht", "fuehlst"};
         String[] witzArray = new String[]{"witz", "lustig", "lachen"};
         String[] infoArray = new String[]{"urheber", "copyright", "impressum", "about"};
 
@@ -185,6 +188,28 @@ public class FragenAntwort {
                     System.out.println("Eine generelle kurze Erklärung?");
                     System.out.println("Aber sicher doch " + nameUser + ".");
                     network1.detaliertNetwork();
+
+                }
+            }
+            for (String wohlbefindenBot : wohlbefindenBotArray) {
+                if (word.contains(wohlbefindenBot)) {
+                    
+                    wohlbefindenBot1.wohlBot();
+                    
+
+                }
+            }
+            for (String witze : witzArray) {
+                if (word.contains(witze)) {
+                    
+                    witz1.witzeSammlung();
+                    
+
+                }
+            }
+            for (String impressum : infoArray) {
+                if (word.contains(impressum)) {
+                    impressum1.infoImpressum();
 
                 }
             }

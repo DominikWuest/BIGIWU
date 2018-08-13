@@ -1,14 +1,20 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+    Semesterarbeit "Objektorientierter Chatbot" 
+    Schule:     ABB Technikerschule Baden
+    Semester:   4
+    Klasse:     B18-if4.1
+    Authoren:
+                Dominik Wüst
+                Andri Binda
+                Marek Giesen
+    
+ */
+
+ /*
+    Klasse für den Fragenkatalog LAN
  */
 package semesterarbeit_v2;
 
-/**
- *
- * @author gima
- */
 public class Lan {
     
     void detailiertLan (){
