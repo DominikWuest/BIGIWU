@@ -28,8 +28,7 @@ public class Semesterarbeit_v2 {
         b1.botBegruessung();
         f1.frageName();
         u1.frageWohlbefinden();
-       // f1.frageWohlbefinden();
-        
+
         // True Schlaufe, damit egal aus welchem menue man kommt es
         // erscheint immer wieder der Chat Partner.
         while (true) {            

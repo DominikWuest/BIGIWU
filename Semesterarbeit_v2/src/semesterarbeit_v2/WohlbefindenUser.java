@@ -100,7 +100,8 @@ public class WohlbefindenUser {
                         + "prächtig :) ");
                 // Keine Verneinung gefunden
             } else {
-                System.out.println("Ach Kopfhoch das wird schon wieder :) ");
+                System.out.println("Das ist schade! Aber "
+                        + "Kopfhoch das wird schon wieder :) ");
             }
         }
 

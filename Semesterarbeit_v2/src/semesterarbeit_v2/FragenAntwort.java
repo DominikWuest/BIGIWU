@@ -19,8 +19,9 @@ package semesterarbeit_v2;
 import java.util.Scanner;
 
 public class FragenAntwort {
-
-    BinaerRechner bin1 = new BinaerRechner();
+    
+    //Objekte aus Klassen erstellen
+    BinRechnerMenu binM1 = new BinRechnerMenu();
     SubnetRechner sub1 = new SubnetRechner();
     Topologien top1 = new Topologien();
     Lan lan1 = new Lan();
@@ -36,10 +37,10 @@ public class FragenAntwort {
     Witz witz1 = new Witz();
     Impressum impressum1 = new Impressum();
     SubnetRechner subnet1 = new SubnetRechner();
-
+    
+    //Initialisiere Scanner und Variabeln
     private Scanner mEingabe = new Scanner(System.in);
     private String nameUser;
-    private String wohlbefindenUser;
     private String chatUser;
 
     void frageName() {
@@ -62,22 +63,55 @@ public class FragenAntwort {
 
         chatUser = mEingabe.nextLine();
         String[] words = chatUser.split(" ");
-        String[] binrechnerArray = new String[]{"binaer", "dezimal", "rechnen", "eins", "nullen"};
-        String[] subnetingArray = new String[]{"subnetz", "ip", "adresse", "gateway", "broadcast"};
-        String[] themaArray = new String[]{"thema", "katalog", "themas", "themen"};
-        String[] firewallArray = new String[]{"firewall", "ports", "trunk", "sicherheit", "blockieren"};
+        String[] binrechnerArray = new String[]{"binaer", "dezimal", "rechnen", 
+            "eins", "nullen"};
+        
+        String[] subnetingArray = new String[]{"subnetz", "ip", "adresse", 
+            "adressen", "gateway", "broadcast", "subnetting", 
+            "ipadressen", "ipadresse"};
+        
+        String[] themaArray = new String[]{"thema", "katalog", 
+            "themas", "themen"};
+        
+        String[] firewallArray = new String[]{"firewall", "ports", 
+            "trunk", "sicherheit", "blockieren"};
+        
         String[] wlanArray = new String[]{"wifi", "wlan", "ghz", "drathlos"};
-        String[] nameArray = new String[]{"name", "heisst", "gigachatbot3000", "bigiwu"};
-        String[] topologieArray = new String[]{"topologie", "stern", "daisychain", "bus", "mesh", "line", "zusammenschliessen", "token", "ring", "tokenring", "tree"};
-        String[] lanArray = new String[]{"lan", "ethernet", "cat", "drahtgebundene", "patch"};
-        String[] switchArray = new String[]{"switch", "ports", "ethernetconnection", "verbindung"};
-        String[] beendenArray = new String[]{"fertig", "exit", "quit", "cancel", "schluss", "schliessen", "aufhoeren", "beenden", "ciao", "adios", "bye"};
-        String[] routerArray = new String[]{"router", "internetverbindung", "internet", "anbieter", "provider"};
-        String[] networkArray = new String[]{"netzwerk", "network", "generell", "allgemein", "erklaerung"};
-        String[] wetterArray = new String[]{"wetter", "sonne", "regen", "schnee", "kalt", "warm", "regenschirm", "jacke", "schneit", "regnet"};
-        String[] wohlbefindenBotArray = new String[]{"geht", "fuehlst"};
+        
+        String[] nameArray = new String[]{"name", "heisst", 
+            "gigachatbot3000", "bigiwu"};
+        
+        String[] topologieArray = new String[]{"topologie", "stern", 
+            "daisychain", "bus", "mesh", "line", "zusammenschliessen", 
+            "token", "ring", "tokenring", "tree"};
+        
+        String[] lanArray = new String[]{"lan", "ethernet", "cat", 
+            "drahtgebundene", "patch"};
+        
+        String[] switchArray = new String[]{"switch", "ports", 
+            "ethernetconnection", "verbindung"};
+        
+        String[] beendenArray = new String[]{"fertig", "exit", "quit", 
+            "cancel", "schluss", "schliessen", "aufhoeren", "beenden", 
+            "ciao", "adios", "bye"};
+        
+        String[] routerArray = new String[]{"router", "internetverbindung", 
+            "internet", "anbieter", "provider"};
+        
+        String[] networkArray = new String[]{"netzwerk", "network", "generell", 
+            "allgemein", "erklaerung"};
+        
+        String[] wetterArray = new String[]{"wetter", "sonne", "regen", 
+            "schnee", "kalt", "warm", "regenschirm", "jacke", 
+            "schneit", "regnet"};
+        
+        String[] wohlbefindenBotArray = new String[]{"geht", "fuehlst", 
+            "gefuehle"};
+        
         String[] witzArray = new String[]{"witz", "lustig", "lachen"};
-        String[] infoArray = new String[]{"urheber", "copyright", "impressum", "about", "dich"};
+        
+        String[] infoArray = new String[]{"urheber", "copyright", 
+            "impressum", "about"};
 
         for (String word : words) {
             for (String binrechner : binrechnerArray) {
@@ -85,7 +119,7 @@ public class FragenAntwort {
                     System.out.println("Sehr gut, zum Thema Binaer und"
                             + " Dezimalrechner kann ich dir Auskunft"
                             + " geben " + nameUser + ".");
-                    binrechnerMenu();
+                    binM1.binrechnerMenu();
                 }
             }
             for (String network : networkArray) {
@@ -224,33 +258,4 @@ public class FragenAntwort {
 
     }
 
-    void binrechnerMenu() {
-
-        System.out.println("Für den Binärrechner gibt es 2 Modi.");
-        System.out.println("Einmal von Binär nach Dezimal und Dezimal zu"
-                + " Binär.");
-        System.out.println("Welchen darf ich für dich starten? Binaer oder Dezimal?");
-        chatUser = mEingabe.nextLine();
-        String[] words = chatUser.split(" ");
-        String[] binDezArray = new String[]{"binaer"};
-        String[] dezBinArray = new String[]{"dezimal"};
-
-        for (String word : words) {
-            for (String binDezRechner : binDezArray) {
-                if (word.contains(binDezRechner)) {
-                    System.out.println("Ich starte für dich den Binär zu "
-                            + "Dezimal Rechner");
-                    bin1.bintoDezRechner();
-                }
-            }
-            for (String dezBinRechner : dezBinArray) {
-                if (word.contains(dezBinRechner)) {
-                    System.out.println("Ich starte für dich den Dezimal zu "
-                            + "Binär Rechner");
-                    bin1.deztoBinRechner();
-                }
-            }
-        }
-
-    }
 }
