@@ -159,7 +159,7 @@ public class FragenAntwort {
         String[] words = chatUser.split(" ");
         String[] binrechnerArray = new String[]{"umrechnen", "binaer", "dezimal", "rechner", "rechnen", "eins", "nullen"};
         String[] subnetingArray = new String[]{"subnetz", "ip", "adresse", "gateway", "broadcast"};
-        String[] themaArray = new String[]{"thema", "katalog"};
+        String[] themaArray = new String[]{"thema", "katalog", "themas", "themen"};
         String[] firewallArray = new String[]{"firewall", "ports", "trunk", "sicherheit", "blockieren"};
         String[] wlanArray = new String[]{"wifi", "wlan", "ghz", "drathlos"};
         String[] nameArray = new String[]{"name", "heisst", "gigachatbot3000", "bigiwu"};
