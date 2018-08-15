@@ -20,14 +20,15 @@ public class Semesterarbeit_v2 {
         // Objekte aus Klassen erstellen
         
         Begruessung b1 = new Begruessung();
-        
+        WohlbefindenUser u1 = new WohlbefindenUser();
         FragenAntwort f1 = new FragenAntwort();
         
         
         // Objekte aufrufen
         b1.botBegruessung();
         f1.frageName();
-        f1.frageWohlbefinden();
+        u1.frageWohlbefinden();
+       // f1.frageWohlbefinden();
         
         // True Schlaufe, damit egal aus welchem menue man kommt es
         // erscheint immer wieder der Chat Partner.

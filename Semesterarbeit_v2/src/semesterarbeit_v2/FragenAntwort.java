@@ -35,6 +35,7 @@ public class FragenAntwort {
     WohlbefindenBot wohlbefindenBot1 = new WohlbefindenBot();
     Witz witz1 = new Witz();
     Impressum impressum1 = new Impressum();
+    SubnetRechner subnet1 = new SubnetRechner();
 
     private Scanner mEingabe = new Scanner(System.in);
     private String nameUser;
@@ -53,103 +54,7 @@ public class FragenAntwort {
 
     }
 
-    void frageWohlbefinden() {
-
-        System.out.println("Wie geht es dir heute " + nameUser + "?");
-        wohlbefindenUser = mEingabe.nextLine();
-        String[] words = wohlbefindenUser.split(" ");
-
-        /*
-            positve + positive = positive
-            positve + negative = negative
-            negative + negative = positive
-         */
-        // true = 1 ist negative, false = 0 ist positive
-        Boolean aussageBoolean1 = true;
-        Boolean aussageBoolean2 = true;
-        Boolean aussageBoolean;
-        String[] positives = new String[]{"gut", "ausgezeichnet", "super", "perfekt", "gesund", "angenehm", "schöner", "geht", "keine", "heil", "reich", "schön", "ausgeschlafen"};
-        String[] negatives = new String[]{"nicht", "schlecht", "solala", "miserabel", "katastrophal", "krank", "schlimm", "übel", "böse", "krankheit", "mau", "kaputt", "müde"};
-
-        for (String word : words) {
-            for (String positive : positives) {
-                if (word.contains(positive)) {
-                    aussageBoolean1 = false;
-                }
-            }
-        }
-        for (String word : words) {
-            for (String negative : negatives) {
-                if (word.contains(negative)) {
-                    aussageBoolean2 = false;
-                }
-            }
-        }
-        aussageBoolean = aussageBoolean1 ^ aussageBoolean2;
-
-        if (aussageBoolean == false) {
-            // positive
-            System.out.println("Gut zu hören " + nameUser + ". Mein Code hat keine Bugs also"
-                    + " gehts mir gut. :) ");
-        } else {
-            //negative
-            System.out.println("Schade aber auch das geht vorüber."
-                    + " Think positiv :) ");
-        }
-
-        System.out.println("So an die Arbeit!");
-        System.out.println("Ich kann dir diverse Fragen"
-                + " zum Thema Netzwerk beantworten.");
-
-        System.out.println("Ich kann dir auch ein Auflistung mit den mir"
-                + " bekannten Themen geben.");
-        System.out.println("Sag dafür nur Thema.");
-
-        /*
-        
-        Boolean hasPositives;
-        Boolean hasNegatives;
-        
-     
-        
-        for (String positive : positives) {
-            hasPositives = wohlbefindenUser.contains(positive);
-            if(hasPositives)
-                break;
-        }
-        
-        for (String negative : negatives) {
-            hasNegatives = wohlbefindenUser.contains(negative);
-            if(hasNegatives)
-                break;
-        }
-                    System.out.println("Das freut mich zu hören!");
-                System.out.println("Mein Code hat keine Bugs also"
-                        + " gehts mir auch gut.");
-                break;
-  
-        
-         */
-
- /*  switch (wohlbefindenUser) {
-            case "gut":
-            case "Gut":
-            case "Sehr gut": 
-            case "sehr gut":{
-                System.out.println("Das freut mich zu hören!");
-                System.out.println("Mein Code hat keine Bugs also"
-                        + " gehts mir auch gut.");
-                break;
-            }
-            case "schlecht":{
-                System.out.println("Schade denk einfach an etwas positives"
-                        + " wie z.B. Security updates. :) ");
-                break;
-                
-            }
-            
-        }*/
-    }
+    
 
     void chatPartner() {
 
@@ -166,7 +71,7 @@ public class FragenAntwort {
         String[] topologieArray = new String[]{"topologie", "stern", "daisychain", "bus", "mesh", "line", "zusammenschliessen", "token", "ring", "tokenring", "tree"};
         String[] lanArray = new String[]{"lan", "ethernet", "cat", "drahtgebundene", "patch"};
         String[] switchArray = new String[]{"switch", "ports", "ethernetconnection", "verbindung"};
-        String[] beendenArray = new String[]{"fertig", "exit", "quit", "cancel", "schluss", "schliessen", "aufhoeren", "beenden", "ciao", "adios"};
+        String[] beendenArray = new String[]{"fertig", "exit", "quit", "cancel", "schluss", "schliessen", "aufhoeren", "beenden", "ciao", "adios", "bye"};
         String[] routerArray = new String[]{"router", "internetverbindung", "internet", "anbieter", "provider"};
         String[] networkArray = new String[]{"netzwerk", "network", "generell", "allgemein", "erklaerung"};
         String[] wetterArray = new String[]{"wetter", "sonne", "regen", "schnee", "kalt", "warm", "regenschirm", "jacke", "schneit", "regnet"};
@@ -217,7 +122,7 @@ public class FragenAntwort {
                 if (word.equalsIgnoreCase(subrechner)) {
                     System.out.println("Aber sicher doch " + nameUser + ". Ich kann dir mit"
                             + " einem Subnetz und IP Rechner aushelfen.");
-                    // HIER SUBNET RECHNER INTEGRIEREN
+                    subnet1.ipToNetmask();
                 }
             }
             for (String topologien : topologieArray) {

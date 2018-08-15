@@ -19,9 +19,10 @@ import java.util.Scanner;
 
 public class BinaerRechner {
 
+    //Alle Variabeln initalisieren
     Scanner mEingabeZahl = new Scanner(System.in);
     Scanner beenden = new Scanner(System.in);
-    Scanner mEingabeAuswahl = new Scanner (System.in);
+    Scanner mEingabeAuswahl = new Scanner(System.in);
 
     int auswahl;
     int binaerzahl1;
@@ -32,12 +33,13 @@ public class BinaerRechner {
     Boolean weiterMachen = true;
 
     void bintoDezRechner() {
-        
+
         System.out.println("Zum beenden des Rechners sag einfach Beenden :) ");
-        //Bitlänge zählen
+
+        //Für mindestens einen Durchlauf eine Do-While Schlaufe
+        //Wenn weiterMachen boolean false, dann Programm beenden
         do {
 
-            
             System.out.println("Bitte gebe einen binären String ein:");
 
             bitstring = mEingabeZahl.nextLine();
@@ -58,29 +60,33 @@ public class BinaerRechner {
                 System.out.println("Die Zahl lautet Dezimal: ");
                 System.out.println(binaerausgabe);
 
-            } 
+            }
+
+            //Frage nach fortführung des Rechners
+            //Arrays definieren, NextLine initalisieren
             System.out.println("Möchtest du weiter machen oder den Rechner beenden?");
             auswahlString = mEingabeAuswahl.nextLine();
             String[] words = auswahlString.split(" ");
             String[] weiterArray = new String[]{"weiter", "weitermachen", "naechste", "Zahl", "nochmals"};
             String[] beendenArray = new String[]{"beenden", "fertig", "nicht", "schliesse"};
-            
-            for (String word : words){
-                for (String weiterMachen : weiterArray ){
-                    if (word.contains(weiterMachen)) {
+
+            //Wörter überprüfen bei weiterArray Match nochmals ausführen
+            //bei beendenArray weiterMachen auf false stellen und beenden
+            for (String word : words) {
+                for (String weiter : weiterArray) {
+                    if (word.contains(weiter)) {
                         System.out.println("Ok.");
-                        
+
                     }
                 }
-                for (String beendenRechner : beendenArray ){
+                for (String beendenRechner : beendenArray) {
                     if (word.contains(beendenRechner)) {
                         System.out.println("Ich beende den Rechner für dich.");
                         weiterMachen = false;
-                        
-                        
+
                     }
                 }
-                
+
             }
 
         } while (weiterMachen == true);
@@ -88,37 +94,43 @@ public class BinaerRechner {
 
     void deztoBinRechner() {
 
+        //Für mindestens einen Durchlauf eine Do-While Schlaufe
+        //Wenn weiterMachen boolean false, dann Programm beenden
         do {
 
+            //Zahl einlesen
             int dezstring;
             System.out.println("Bitte gebe eine Dezimale Zahl ein:");
             dezstring = mEingabeZahl.nextInt();
             System.out.println("Deine Zahl lautet in der Binären Schreibweise: ");
+            //Zahl convetieren
             System.out.println(Integer.toBinaryString(dezstring));
             System.out.println("Möchtest du weiter machen oder den Rechner beenden?");
-            
+
+            //Frage nach fortführung des Rechners
+            //Arrays definieren, NextLine initalisieren
             auswahlString = mEingabeAuswahl.nextLine();
             String[] words = auswahlString.split(" ");
             String[] weiterArray = new String[]{"weiter", "weitermachen", "naechste", "Zahl", "nochmals"};
             String[] beendenArray = new String[]{"beenden", "fertig", "nicht", "schliesse"};
-            
-            for (String word : words){
-                for (String weiterMachen : weiterArray ){
-                    if (word.contains(weiterMachen)) {
+
+            //Wörter überprüfen bei weiterArray Match nochmals ausführen
+            //bei beendenArray weiterMachen auf false stellen und beenden
+            for (String word : words) {
+                for (String weiter : weiterArray) {
+                    if (word.contains(weiter)) {
                         System.out.println("Ok.");
                     }
                 }
-                for (String beendenRechner : beendenArray ){
+                for (String beendenRechner : beendenArray) {
                     if (word.contains(beendenRechner)) {
                         System.out.println("Ich beende den Rechner für dich.");
                         weiterMachen = false;
-                        
-                        
+
                     }
                 }
-                
+
             }
-            
 
         } while (weiterMachen == true);
 
