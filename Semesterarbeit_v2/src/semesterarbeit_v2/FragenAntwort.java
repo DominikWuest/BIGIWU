@@ -157,7 +157,7 @@ public class FragenAntwort {
 
         chatUser = mEingabe.nextLine();
         String[] words = chatUser.split(" ");
-        String[] binrechnerArray = new String[]{"umrechnen", "binaer", "dezimal", "rechner", "rechnen", "eins", "nullen"};
+        String[] binrechnerArray = new String[]{"binaer", "dezimal", "rechnen", "eins", "nullen"};
         String[] subnetingArray = new String[]{"subnetz", "ip", "adresse", "gateway", "broadcast"};
         String[] themaArray = new String[]{"thema", "katalog", "themas", "themen"};
         String[] firewallArray = new String[]{"firewall", "ports", "trunk", "sicherheit", "blockieren"};
@@ -176,7 +176,7 @@ public class FragenAntwort {
 
         for (String word : words) {
             for (String binrechner : binrechnerArray) {
-                if (word.contains(binrechner)) {
+                if (word.equalsIgnoreCase(binrechner)) {
                     System.out.println("Sehr gut, zum Thema Binaer und"
                             + " Dezimalrechner kann ich dir Auskunft"
                             + " geben " + nameUser + ".");
@@ -184,7 +184,7 @@ public class FragenAntwort {
                 }
             }
             for (String network : networkArray) {
-                if (word.contains(network)) {
+                if (word.equalsIgnoreCase(network)) {
                     System.out.println("Eine generelle kurze Erklärung?");
                     System.out.println("Aber sicher doch " + nameUser + ".");
                     network1.detaliertNetwork();
@@ -192,7 +192,7 @@ public class FragenAntwort {
                 }
             }
             for (String wohlbefindenBot : wohlbefindenBotArray) {
-                if (word.contains(wohlbefindenBot)) {
+                if (word.equalsIgnoreCase(wohlbefindenBot)) {
                     
                     wohlbefindenBot1.wohlBot();
                     
@@ -200,7 +200,7 @@ public class FragenAntwort {
                 }
             }
             for (String witze : witzArray) {
-                if (word.contains(witze)) {
+                if (word.equalsIgnoreCase(witze)) {
                     
                     witz1.witzeSammlung();
                     
@@ -208,20 +208,20 @@ public class FragenAntwort {
                 }
             }
             for (String impressum : infoArray) {
-                if (word.contains(impressum)) {
+                if (word.equalsIgnoreCase(impressum)) {
                     impressum1.infoImpressum();
 
                 }
             }
             for (String subrechner : subnetingArray) {
-                if (word.contains(subrechner)) {
+                if (word.equalsIgnoreCase(subrechner)) {
                     System.out.println("Aber sicher doch " + nameUser + ". Ich kann dir mit"
                             + " einem Subnetz und IP Rechner aushelfen.");
                     // HIER SUBNET RECHNER INTEGRIEREN
                 }
             }
             for (String topologien : topologieArray) {
-                if (word.contains(topologien)) {
+                if (word.equalsIgnoreCase(topologien)) {
                     System.out.println("Das Thema Topologie finde ich auch spannend " + nameUser + ".");
                     System.out.println("Hier meine Zusammenfassung.");
                     top1.detailiertTopologien();
@@ -229,28 +229,28 @@ public class FragenAntwort {
                 }
             }
             for (String lan : lanArray) {
-                if (word.contains(lan)) {
+                if (word.equalsIgnoreCase(lan)) {
                     System.out.println("Classic. Lass mir dir LAN erklären " + nameUser + ".");
                     lan1.detailiertLan();
 
                 }
             }
             for (String firewall : firewallArray) {
-                if (word.contains(firewall)) {
+                if (word.equalsIgnoreCase(firewall)) {
                     System.out.println("The Stage is on Fire! " + nameUser + " das weiss ich zur Firewall.");
                     firewall1.detailiertFirewall();
 
                 }
             }
             for (String switchWord : switchArray) {
-                if (word.contains(switchWord)) {
+                if (word.equalsIgnoreCase(switchWord)) {
                     System.out.println(nameUser + " zu Switchen weiss ich so einiges.");
                     switch1.detailiertSwitch();
 
                 }
             }
             for (String router : routerArray) {
-                if (word.contains(router)) {
+                if (word.equalsIgnoreCase(router)) {
                     System.out.println("Fragen zum Wunderkasten, welcher Internet ins Haus bringt?");
                     System.out.println("Die kann ich dir beantworten " + nameUser + ".");
                     router1.detailiertRouter();
@@ -258,14 +258,14 @@ public class FragenAntwort {
                 }
             }
             for (String thema : themaArray) {
-                if (word.contains(thema)) {
+                if (word.equalsIgnoreCase(thema)) {
                     System.out.println("Alles klar " + nameUser + ".");
                     thema1.detailiertThema();
 
                 }
             }
             for (String wlan : wlanArray) {
-                if (word.contains(wlan)) {
+                if (word.equalsIgnoreCase(wlan)) {
                     System.out.println("Zum Thema WLAN kann ich dir helfen " + nameUser + ".");
                     wlan1.detailiertWlan();
 
@@ -273,14 +273,14 @@ public class FragenAntwort {
             }
 
             for (String nameBot : nameArray) {
-                if (word.contains(nameBot)) {
+                if (word.equalsIgnoreCase(nameBot)) {
                     System.out.println("Jaa jaaa " + nameUser + ". Wiedermal fragen zu meinen Namen. ;) ");
                     name1.detailiertName();
                 }
             }
             
             for (String wetter : wetterArray) {
-                if (word.contains(wetter)) {
+                if (word.equalsIgnoreCase(wetter)) {
                     System.out.println(nameUser + " hast du keine Fenster bei dir?");
                     System.out.println("Aber ja ich kann dir sagen wie das Wetter heute sein wird. Fast so gut wie Siri.");
                     wetter1.detailiertWetter();
@@ -290,7 +290,7 @@ public class FragenAntwort {
 
             
             for (String beenden : beendenArray) {
-                if (word.contains(beenden)) {
+                if (word.equalsIgnoreCase(beenden)) {
                     System.out.println("Ich hoffe ich konnte dir helfen " + nameUser + ".");
                     System.out.println("Ich schliesse mich nun für dich.");
                     System.out.println("Bye bye!");

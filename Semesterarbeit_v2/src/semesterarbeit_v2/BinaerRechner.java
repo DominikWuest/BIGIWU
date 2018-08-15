@@ -69,7 +69,7 @@ public class BinaerRechner {
                 for (String weiterMachen : weiterArray ){
                     if (word.contains(weiterMachen)) {
                         System.out.println("Ok.");
-                        this.weiterMachen = true;
+                        
                     }
                 }
                 for (String beendenRechner : beendenArray ){
