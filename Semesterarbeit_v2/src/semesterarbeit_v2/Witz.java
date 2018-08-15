@@ -15,18 +15,29 @@
  */
 package semesterarbeit_v2;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class Witz {
-    
-    void witzeSammlung(){
+
+    void witzeSammlung() {
+
+        // Generator implementieren
+        Random rndGen = new Random();
         
-        System.out.println("Zwei Jäger treffen sich.");
-        System.out.println("Was ist grün und auf Knopfdruck rot? "
-                + "\nEin Frosch in einem Mixer.");
-        System.out.println("Ich konnte es nicht fassen. Mein Nachbar hat "
-                + "tatsächlich noch um 3 Uhr Nachts bei uns geklingelt. "
-                + "\nMir wäre fast die Bohrmaschine runtergefallen.");
-        System.out.println("Berühmte letzte Worte eines Fallschirmspringers. "
-                + "\nImmer diese blöden Motten.");
+        String[] witzeAuswahl = {"Zwei Jäger treffen sich.", 
+            "Was ist grün und auf Knopfdruck rot? \nEin Frosch in einem Mixer.", 
+            "Ich konnte es nicht fassen. Mein Nachbar hat tatsächlich noch"
+                + " um 3 Uhr Nachts bei uns geklingelt. "
+                + "\nMir wäre fast die Bohrmaschine runtergefallen.", 
+            "Berühmte letzte Worte eines Fallschirmspringers. "
+                + "\nImmer diese blöden Motten."};
+
+        int witzIndex = rndGen.nextInt(4);
+        
+        System.out.println(witzeAuswahl[witzIndex]);
+        
+        
     }
-    
+
 }

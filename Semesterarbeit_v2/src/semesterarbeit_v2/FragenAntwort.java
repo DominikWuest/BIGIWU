@@ -166,7 +166,7 @@ public class FragenAntwort {
         String[] topologieArray = new String[]{"topologie", "stern", "daisychain", "bus", "mesh", "line", "zusammenschliessen", "token", "ring", "tokenring", "tree"};
         String[] lanArray = new String[]{"lan", "ethernet", "cat", "drahtgebundene", "patch"};
         String[] switchArray = new String[]{"switch", "ports", "ethernetconnection", "verbindung"};
-        String[] beendenArray = new String[]{"fertig", "exit", "quit", "cancel", "schluss", "schliessen", "schliesse", "aufhoeren", "beenden"};
+        String[] beendenArray = new String[]{"fertig", "exit", "quit", "cancel", "schluss", "schliessen", "aufhoeren", "beenden", "ciao", "adios"};
         String[] routerArray = new String[]{"router", "internetverbindung", "internet", "anbieter", "provider"};
         String[] networkArray = new String[]{"netzwerk", "network", "generell", "allgemein", "erklaerung"};
         String[] wetterArray = new String[]{"wetter", "sonne", "regen", "schnee", "kalt", "warm", "regenschirm", "jacke", "schneit", "regnet"};
