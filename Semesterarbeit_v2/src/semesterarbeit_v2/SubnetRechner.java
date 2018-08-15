@@ -71,7 +71,21 @@ public class SubnetRechner {
         int nc = sc & c;
         int nd = sd & d;
 
+        //Berechnung Broadcastadresse 
+        int ba = a | sa ^ 255;
+        int bb = b | sb ^ 255;
+        int bc = c | sc ^ 255;
+        int bd = d | sd ^ 255;
+
+        //Anzahl Hosts
+        int anzahlHostBits = 32 - (Integer.bitCount(sa) + Integer.bitCount(sb) + Integer.bitCount(sc) + Integer.bitCount(sd));
+        int anzahlHosts = (int) (Math.pow(2, anzahlHostBits) - 2);
+
         System.out.println("Die Netzwerkadresse lautet: " + na + "." + nb + "." + nc + "." + nd);
+        System.out.println("Die Broadcastkadresse lautet: " + ba + "." + bb + "." + bc + "." + bd);
+        System.out.println("Die erste IP in diesem Subnet lautet: " + na + "." + nb + "." + nc + "." + (nd + 1));
+        System.out.println("Die letzte IP in diesem Subnet lautet: " + ba + "." + bb + "." + bc + "." + (bd - 1));
+        System.out.println("Die Anzahl verwendbarer IPs in diesem Subnet lautet: " + anzahlHosts);
 
     }
 
