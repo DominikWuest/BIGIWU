@@ -2,7 +2,6 @@
 package semesterarbeit_v2;
 
 
-//Importieren von vorhandenen Java-Klassen
 public class Semesterarbeit_v2 {
 
       /*
@@ -16,6 +15,7 @@ public class Semesterarbeit_v2 {
                 Marek Giesen
     
      */
+    // MainKlasse für Chatbot
     public static void main(String[] args) {
         // Objekte aus Klassen erstellen
         

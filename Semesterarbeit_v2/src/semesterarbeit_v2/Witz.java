@@ -16,7 +16,7 @@
 package semesterarbeit_v2;
 
 import java.util.Random;
-import java.util.Scanner;
+
 
 public class Witz {
 
@@ -24,7 +24,7 @@ public class Witz {
 
         // Generator implementieren
         Random rndGen = new Random();
-        
+        // Mögliche Antworten
         String[] witzeAuswahl = {"Zwei Jäger treffen sich.", 
             "Was ist grün und auf Knopfdruck rot? \nEin Frosch in einem Mixer.", 
             "Ich konnte es nicht fassen. Mein Nachbar hat tatsächlich noch"
@@ -33,8 +33,9 @@ public class Witz {
             "Berühmte letzte Worte eines Fallschirmspringers. "
                 + "\nImmer diese blöden Motten."};
 
+        // Zufällige Auswahl eines Satzes
         int witzIndex = rndGen.nextInt(4);
-        
+        // Ausgabe des Zufallssatzes
         System.out.println(witzeAuswahl[witzIndex]);
         
         

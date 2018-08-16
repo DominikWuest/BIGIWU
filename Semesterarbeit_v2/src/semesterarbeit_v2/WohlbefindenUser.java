@@ -43,19 +43,19 @@ public class WohlbefindenUser {
         Findet man keine ist die Aussage negativ. Findet man eine Verneinung
         ist die Aussage positiv, trotz negativen Wort.
          */
-        //Initialisiere boolean
+        // Initialisiere boolean
         Boolean positivBoolean = false;
         Boolean negativBoolean = false;
         Boolean verneinungBoolean = false;
 
-        //Arrays für gesuchte Schlüsselwörter
+        // Arrays für gesuchte Schlüsselwörter
         String[] positives = new String[]{"gut", "ausgezeichnet", "super", "perfekt", "gesund", "angenehm", "schoener", "geht", "keine", "heil", "reich", "schoen", "ausgeschlafen"};
         String[] negatives = new String[]{"schlecht", "solala", "miserabel", "katastrophal", "krank", "schlimm", "übel", "böse", "krankheit", "mau", "kaputt", "muede"};
         String[] verneinungen = new String[]{"nicht", "ned"};
 
-        //Jedes Wort wird geprüft und die Booleans geändert
+        // Jedes Wort wird geprüft und die Booleans geändert
         for (String word : words) {
-            //prüft ob positiv
+            // prüft ob positiv vorhanden
             for (String positive : positives) {
                 if (word.equalsIgnoreCase(positive)) {
                     positivBoolean = true;
@@ -63,7 +63,7 @@ public class WohlbefindenUser {
             }
         }
         for (String word : words) {
-            //prüft ob negativ
+            // prüft ob negativ vorhanden
             for (String negative : negatives) {
                 if (word.equalsIgnoreCase(negative)) {
                     negativBoolean = true;
@@ -71,10 +71,11 @@ public class WohlbefindenUser {
             }
         }
         for (String word : words) {
-            //prüft ob verneinung
+            // prüft ob verneinung vorhanden
+            // Erkennt so mehrfach verneinungen
             for (String verneinung : verneinungen) {
                 if (word.equalsIgnoreCase(verneinung)) {
-                    verneinungBoolean = true;
+                    verneinungBoolean = !verneinungBoolean;
 
                 }
             }
