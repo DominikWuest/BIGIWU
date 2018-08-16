@@ -18,23 +18,26 @@ package semesterarbeit_v2;
 import java.util.Random;
 
 public class HelfenAussage {
-    
-    void helfenSammlung() {
+
+    String nameUser;
+
+
+    void helfenSammlung(String nameUser) {
+        this.nameUser = nameUser;
 
         // Generator implementieren
         Random rndGen = new Random();
         // Mögliche Antworten
-        String[] helfenAuswahl = {"Wie kann ich dir helfen?", 
-        "Was ist deine Frage?",
-        "Zu welchen Thema kann ich Auskunft geben?",
-        "Was kann ich für dich tun?"};
+        String[] helfenAuswahl = {"Wie kann ich dir helfen " + nameUser + "?",
+            "Was ist deine Frage " + nameUser + "?",
+            nameUser + ", zu welchen Thema kann ich Auskunft geben?",
+            "Was kann ich für dich tun " + nameUser + "?"};
 
         // Zufällige Auswahl eines Satzes
         int helfenIndex = rndGen.nextInt(4);
         // Ausgabe des Zufallssatzes
         System.out.println(helfenAuswahl[helfenIndex]);
-        
-        
+
     }
-    
+
 }

@@ -44,7 +44,8 @@ public class FragenAntwort {
     private Scanner mEingabe = new Scanner(System.in);
     private String nameUser;
     private String chatUser;
-
+    
+    // Fragt nach dem Namen des Users
     void frageName() {
 
         System.out.println("Zuerst mal Hallo von meiner Seite.");
@@ -61,7 +62,7 @@ public class FragenAntwort {
 
         
         // Fragt den User wie er ihm helfen kann
-        helfen1.helfenSammlung();
+        helfen1.helfenSammlung(nameUser);
 
         // Initialisiere Eingabe und Split der Wörter für Erkennung
         // Darstellung für Ausdruck auf A4 untereinander geschoben
