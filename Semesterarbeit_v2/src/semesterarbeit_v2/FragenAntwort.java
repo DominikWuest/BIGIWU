@@ -119,6 +119,7 @@ public class FragenAntwort {
             "impressum", "about"};
         String[] schimpfwortArray = new String[]{"scheisse", "bloed", "doof", 
             "mist", "dumm"};
+        
 
         for (String word : words) {
             for (String binrechner : binrechnerArray) {

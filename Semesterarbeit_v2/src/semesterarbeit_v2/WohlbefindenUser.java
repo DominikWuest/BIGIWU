@@ -49,14 +49,14 @@ public class WohlbefindenUser {
         Boolean verneinungBoolean = false;
 
         // Arrays für gesuchte Schlüsselwörter
-        String[] positives = new String[]{"gut", "ausgezeichnet", "super", "perfekt", "gesund", "angenehm", "schoener", "geht", "keine", "heil", "reich", "schoen", "ausgeschlafen"};
-        String[] negatives = new String[]{"schlecht", "solala", "miserabel", "katastrophal", "krank", "schlimm", "übel", "böse", "krankheit", "mau", "kaputt", "muede"};
-        String[] verneinungen = new String[]{"nicht", "ned"};
+        String[] positivesArray = new String[]{"gut", "ausgezeichnet", "super", "perfekt", "gesund", "angenehm", "schoener", "geht", "keine", "heil", "reich", "schoen", "ausgeschlafen"};
+        String[] negativesArray = new String[]{"schlecht", "solala", "miserabel", "katastrophal", "krank", "schlimm", "übel", "böse", "krankheit", "mau", "kaputt", "muede"};
+        String[] verneinungenArray = new String[]{"nicht", "ned"};
 
         // Jedes Wort wird geprüft und die Booleans geändert
         for (String word : words) {
             // prüft ob positiv vorhanden
-            for (String positive : positives) {
+            for (String positive : positivesArray) {
                 if (word.equalsIgnoreCase(positive)) {
                     positivBoolean = true;
                 }
@@ -64,7 +64,7 @@ public class WohlbefindenUser {
         }
         for (String word : words) {
             // prüft ob negativ vorhanden
-            for (String negative : negatives) {
+            for (String negative : negativesArray) {
                 if (word.equalsIgnoreCase(negative)) {
                     negativBoolean = true;
                 }
@@ -73,7 +73,7 @@ public class WohlbefindenUser {
         for (String word : words) {
             // prüft ob verneinung vorhanden
             // Erkennt so mehrfach verneinungen
-            for (String verneinung : verneinungen) {
+            for (String verneinung : verneinungenArray) {
                 if (word.equalsIgnoreCase(verneinung)) {
                     verneinungBoolean = !verneinungBoolean;
 
