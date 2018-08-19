@@ -39,10 +39,11 @@ public class BinRechnerMenu {
         // Teilt die Eingabe auf Einzelne Wörter in ein Array auf
         String[] words = chatUser.split(" ");
         // Dem Bot bekanntes Antwort Array
-        String[] binDezArray = new String[]{"binaer"};
-        String[] dezBinArray = new String[]{"dezimal"};
+        String[] binDezArray = new String[]{"binaer", "bin"};
+        String[] dezBinArray = new String[]{"dezimal", "dez"};
         
-        // Geht mit der Funktion FunktionArray durch die einzelnen Wörter.
+        // Geht mit der Funktion FunktionArray durch die einzelnen Wörter
+        // Findet er ein passendes führt er die Aktion aus
         if (FunktionArray.uebereinstimungen(words, binDezArray)) {
             System.out.println("Ich starte für dich den Binär zu "
             + "Dezimal Rechner");

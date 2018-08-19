@@ -32,9 +32,16 @@ public class BinaerRechner {
     String auswahlString;
     Boolean weiterMachen = true;
 
+    // Arrays für überprüfung initialisieren
+    String[] weiterArray = new String[]{"weiter", "weitermachen",
+        "naechste", "Zahl", "nochmals"};
+    String[] beendenArray = new String[]{"beenden", "fertig",
+        "nicht", "schliesse"};
+
     void bintoDezRechner() {
 
-        System.out.println("Zum beenden des Rechners sag einfach Beenden :) ");
+        System.out.println("Zum beenden des Rechners sag "
+                + "einfach Beenden :) ");
 
         //Für mindestens einen Durchlauf eine Do-While Schlaufe
         //Wenn weiterMachen boolean false, dann Programm beenden
@@ -62,33 +69,24 @@ public class BinaerRechner {
 
             }
 
-            //Frage nach fortführung des Rechners
-            //Arrays definieren, NextLine initalisieren
-            System.out.println("Möchtest du weiter machen oder den Rechner beenden?");
+            // Frage nach fortführung des Rechners
+            // NextLine initalisieren, Wörter aufteilen in neues Array
+            
+            System.out.println("Möchtest du weiter machen "
+                    + "oder den Rechner beenden?");
             auswahlString = mEingabeAuswahl.nextLine();
             String[] words = auswahlString.split(" ");
-            String[] weiterArray = new String[]{"weiter", "weitermachen", "naechste", "Zahl", "nochmals"};
-            String[] beendenArray = new String[]{"beenden", "fertig", "nicht", "schliesse"};
 
-            //Wörter überprüfen bei weiterArray Match nochmals ausführen
-            //bei beendenArray weiterMachen auf false stellen und beenden
-            for (String word : words) {
-                for (String weiter : weiterArray) {
-                    if (word.contains(weiter)) {
-                        System.out.println("Ok.");
-
-                    }
-                }
-                for (String beendenRechner : beendenArray) {
-                    if (word.contains(beendenRechner)) {
-                        System.out.println("Ich beende den Rechner für dich.");
-                        weiterMachen = false;
-
-                    }
-                }
-
+            // Wörter überprüfen bei weiterArray Match nochmals ausführen
+            // bei beendenArray weiterMachen auf false stellen und beenden
+            // Mithilfe der Funktion FunktionArray überprüft
+            
+            if (FunktionArray.uebereinstimungen(words, weiterArray)) {
+                System.out.println("Ok.");
+            } else if (FunktionArray.uebereinstimungen(words, beendenArray)) {
+                System.out.println("Ich beende den Rechner für dich.");
+                weiterMachen = false;
             }
-
         } while (weiterMachen == true);
     }
 
@@ -102,36 +100,29 @@ public class BinaerRechner {
             int dezstring;
             System.out.println("Bitte gebe eine Dezimale Zahl ein:");
             dezstring = mEingabeZahl.nextInt();
-            System.out.println("Deine Zahl lautet in der Binären Schreibweise: ");
+            System.out.println("Deine Zahl lautet in der "
+                    + "Binären Schreibweise: ");
             //Zahl convetieren
             System.out.println(Integer.toBinaryString(dezstring));
-            System.out.println("Möchtest du weiter machen oder den Rechner beenden?");
+            System.out.println("Möchtest du weiter machen "
+                    + "oder den Rechner beenden?");
 
             //Frage nach fortführung des Rechners
-            //Arrays definieren, NextLine initalisieren
+            //NextLine initalisieren, Wörter aufteilen in neues Array
+            
             auswahlString = mEingabeAuswahl.nextLine();
             String[] words = auswahlString.split(" ");
-            String[] weiterArray = new String[]{"weiter", "weitermachen", "naechste", "Zahl", "nochmals"};
-            String[] beendenArray = new String[]{"beenden", "fertig", "nicht", "schliesse"};
 
-            //Wörter überprüfen bei weiterArray Match nochmals ausführen
-            //bei beendenArray weiterMachen auf false stellen und beenden
-            for (String word : words) {
-                for (String weiter : weiterArray) {
-                    if (word.contains(weiter)) {
-                        System.out.println("Ok.");
-                    }
-                }
-                for (String beendenRechner : beendenArray) {
-                    if (word.contains(beendenRechner)) {
-                        System.out.println("Ich beende den Rechner für dich.");
-                        weiterMachen = false;
-
-                    }
-                }
-
+            // Wörter überprüfen bei weiterArray Match nochmals ausführen
+            // bei beendenArray weiterMachen auf false stellen und beenden
+            // Mithilfe der Funktion FunktionArray überprüft
+            
+            if (FunktionArray.uebereinstimungen(words, weiterArray)) {
+                System.out.println("Ok.");
+            } else if (FunktionArray.uebereinstimungen(words, beendenArray)) {
+                System.out.println("Ich beende den Rechner für dich.");
+                weiterMachen = false;
             }
-
         } while (weiterMachen == true);
 
     }
