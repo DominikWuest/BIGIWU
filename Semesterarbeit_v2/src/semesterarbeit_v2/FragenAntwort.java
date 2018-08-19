@@ -202,6 +202,8 @@ public class FragenAntwort {
                     + "nun für dich.");
             System.out.println("Bye bye!");
             System.exit(0);
+        } else {
+            noMatch1.noMatchGoogle(chatUser);
         }
     }
 }
