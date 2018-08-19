@@ -11,7 +11,8 @@
  */
 
  /*
-    Klasse für die Beschimpfung Aussage. Gibt einen zufälligen Satz wieder.
+    Klasse für die Beschimpfung Aussage. Gibt einen 
+    zufälligen Satz wieder.
     Wurde programmiert für die gemeinen Tester ;)
  */
 package semesterarbeit_v2;
