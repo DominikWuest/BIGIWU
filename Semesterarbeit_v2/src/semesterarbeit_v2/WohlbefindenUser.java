@@ -10,7 +10,15 @@
     
  */
  /*
-    In dieser Klasse wird nach dem Wohlbefinden des Users gefragt
+    In dieser Klasse wird nach dem Wohlbefinden des Users gefragt.
+    Der Bot erkennt eine Vielzahl von Wörtern und kann auf ein
+    mehrfache Verneinung eine korrekte Antwort geben.
+    Getestet mit der 40-fachen Verneinung. Korrekte Antwort erhalten.
+    Gibt 4 unterschiedliche Antworten auf die möglichen Szenarien zurück.
+    Hier bewusst auf eine zufällige passende Antwort verzichetet, dass
+    der User auch bei einer X-fachen Verneinung die korrekte Antwort
+    auslesen kann. 
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 
@@ -52,10 +60,23 @@ public class WohlbefindenUser {
         Boolean verneinungBoolean = false;
 
         // Arrays für gesuchte Schlüsselwörter
-        String[] positivesArray = new String[]{"gut", "ausgezeichnet", "super", "perfekt", "gesund", "angenehm", "schoener", "geht", "keine", "heil", "reich", "schoen", "ausgeschlafen"};
-        String[] negativesArray = new String[]{"schlecht", "solala", "miserabel", "katastrophal", "krank", "schlimm", "übel", "böse", "krankheit", "mau", "kaputt", "muede"};
+        String[] positivesArray = new String[]{"gut", "ausgezeichnet", 
+            "super", "perfekt", "gesund", "angenehm", "schoener", 
+            "geht", "keine", "heil", "reich", "schoen", 
+            "ausgeschlafen"};
+        String[] negativesArray = new String[]{"schlecht", "solala", 
+            "miserabel", "katastrophal", "krank", "schlimm", "uebel", 
+            "böse", "krankheit", "scheisse", "mau", "kaputt", "muede", 
+            "grauenhaft", "beschissen"};
         String[] verneinungenArray = new String[]{"nicht", "ned"};
-
+        
+        /*
+         Aufgrund eines Logikfehlers kann hier nicht die
+         Funktion FunktionArray verwendet werdne.
+         Diese bricht nach einem Match ab, so wäre die
+         mehrfache Verneinung nicht gewährleistet.
+        */
+        
         // Jedes Wort wird geprüft und die Booleans geändert
         for (String word : words) {
             // prüft ob positiv vorhanden
@@ -83,6 +104,7 @@ public class WohlbefindenUser {
                 }
             }
         }
+        
 
         // Positive Schlaufe
         if (positivBoolean == true) {
