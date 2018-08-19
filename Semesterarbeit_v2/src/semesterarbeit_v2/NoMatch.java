@@ -20,7 +20,7 @@ import java.util.Scanner;
 
 public class NoMatch {
 
-    String question;
+    private String question;
     private String sucheAntwort;
     private Scanner mEingabe = new Scanner(System.in);
 
@@ -44,7 +44,7 @@ public class NoMatch {
             for (String nochmals : nochmalsArray) {
                 if (word.equalsIgnoreCase(nochmals)) {
                     System.out.println("Dann nochmals.");
-
+                    
                 }
             }
         }
