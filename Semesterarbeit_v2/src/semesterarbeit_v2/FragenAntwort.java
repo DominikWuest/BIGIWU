@@ -11,8 +11,9 @@
  */
 
  /*
-Hier wird der eigendliche Chatbot programmiert. Kommunikation
-mit Fragen und Antworten.
+    Hier wird der eigendliche Chatbot programmiert. Kommunikation
+    mit Fragen und Antworten.
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 
@@ -131,7 +132,7 @@ public class FragenAntwort {
         // ob er in dem Vorgegeben Array einen Match hat.
         // Findet er einen öffnet er die Methode die zum Array passt
         // und liefert dem User die Antwort.
-        // Darstellung für A4 ausdruck zusammengerückt.
+        
         if (FunktionArray.uebereinstimungen(words, binrechnerArray)) {
             System.out.println("Sehr gut, zum Thema Binaer und"
                     + " Dezimalrechner kann ich dir Auskunft"

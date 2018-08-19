@@ -10,8 +10,9 @@
     
  */
  /*
-In dieser Klasse können Dezimal- in Binärzahlen und umgekehrt
-ausgerechnet werden.
+    In dieser Klasse können Dezimal- in Binärzahlen und umgekehrt
+    ausgerechnet werden.
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 
@@ -36,7 +37,7 @@ public class BinaerRechner {
     String[] weiterArray = new String[]{"weiter", "weitermachen",
         "naechste", "Zahl", "nochmals"};
     String[] beendenArray = new String[]{"beenden", "fertig",
-        "nicht", "schliesse"};
+        "nicht", "schliesse", "exit"};
 
     void bintoDezRechner() {
 

@@ -12,17 +12,36 @@
 
  /*
     Klasse für den Fragenkatalog Wohlbefinden des Bots
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 
+import java.util.Random;
+
 public class WohlbefindenBot {
     
+    
     void wohlBot(){
-        System.out.println("Wie es mir geht?");
-        System.out.println("Naja ich bin bugfrei, compiliert und am laufen.");
-        System.out.println("Also kann ich mich nicht beklagen.");
-        System.out.println("Du könntest aber mal etwas mehr RAM einbauen.");
-        System.out.println("Dann wäre ich noch flotter. ;) ");
+        // Erzählt einen zufälligen Satz aus dem Array über sein
+        // eignes Wohlbefinden.
+        
+        // Generator implementieren
+        Random rndGen = new Random();
+        // Mögliche Antworten
+        String[] wohlBotArray = {
+            "Naja ich bin bugfrei, compiliert und am laufen. "
+                + "\nAlso sehr gut.",
+            "Also kann ich mich nicht beklagen. "
+                + "\nDu könntest aber mal etwas mehr RAM einbauen. ;) ",
+            "RAM gebt mir mehr RAAAMMM!! "
+                + "\nUnd CPU!!",
+            "So einem schönen Code kann es nur gut gehen!"
+        };
+
+        // Zufällige Auswahl eines Satzes
+        int botIndex = rndGen.nextInt(4);
+        // Ausgabe des Zufallssatzes
+        System.out.println(wohlBotArray[botIndex]);
     }
     
 }

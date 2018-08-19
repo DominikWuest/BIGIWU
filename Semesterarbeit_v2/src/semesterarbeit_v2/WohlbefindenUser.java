@@ -33,16 +33,19 @@ public class WohlbefindenUser {
         String[] words = wohlbefindenUser.split(" ");
 
         /*
-        Eingabe geht durch ein For each. Jedes Wort wird geprüft ob
-        es im Array vorkommt. Wird ein positives Word erkannt geht man
-        In die positiv Schlaufe. Da wird nach einer Verneinung gesucht.
-        Findet man keine ist die Aussage positiv. Findet man eine Verneinung
-        ist die Aussage negativ, trotz positiven Wort.
-        Wird ein negatives Word erkannt geht man
-        In die negative Schlaufe. Da wird nach einer Verneinung gesucht.
-        Findet man keine ist die Aussage negativ. Findet man eine Verneinung
-        ist die Aussage positiv, trotz negativen Wort.
+        Eingabe geht durch ein For each. Jedes Wort wird 
+        geprüft ob es im Array vorkommt. Wird ein 
+        positives Word erkannt geht man in die positiv Schlaufe. 
+        Da wird nach einer Verneinung gesucht. Findet man keine 
+        ist die Aussage positiv. Findet man eine Verneinung ist 
+        die Aussage negativ, trotz positiven Wort. Wird ein 
+        negatives Word erkannt geht man in die negative 
+        Schlaufe. Da wird nach einer Verneinung gesucht.
+        Findet man keine ist die Aussage negativ. Findet 
+        man eine Verneinung ist die Aussage positiv, 
+        trotz negativen Wort.
          */
+        
         // Initialisiere boolean
         Boolean positivBoolean = false;
         Boolean negativBoolean = false;

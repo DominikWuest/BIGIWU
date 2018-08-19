@@ -11,8 +11,9 @@
  */
 
  /*
-   Zeigt die Möglichkeiten Dez -> Bin und Bin -> Dez an und user kann
-   auswählen, welche er verwenden möchte.
+    Zeigt die Möglichkeiten Dez -> Bin und Bin -> Dez an und user kann
+    auswählen, welche er verwenden möchte.
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 
@@ -43,7 +44,7 @@ public class BinRechnerMenu {
         String[] dezBinArray = new String[]{"dezimal", "dez"};
         
         // Geht mit der Funktion FunktionArray durch die einzelnen Wörter
-        // Findet er ein passendes führt er die Aktion aus
+        // Findet er ein passendes Wort führt er die Aktion aus
         if (FunktionArray.uebereinstimungen(words, binDezArray)) {
             System.out.println("Ich starte für dich den Binär zu "
             + "Dezimal Rechner");

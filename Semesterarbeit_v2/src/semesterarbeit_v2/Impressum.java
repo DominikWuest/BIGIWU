@@ -12,6 +12,7 @@
 
  /*
     Klasse für das Impressum
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 

@@ -12,14 +12,19 @@
 
  /*
     Klasse für den Fragenkatalog LAN
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 
 public class Lan {
     
+    // Gibt dem User eine kurze eigene Zusammenfassung über das Thema
+    // LAN zurück.
     void detailiertLan (){
-        System.out.println("LAN ist das drahtgebundene Medium im Netzwerk.");
-        System.out.println("Local Area Network ist die Definition von LAN.");
+        System.out.println("LAN ist das drahtgebundene "
+                + "Medium im Netzwerk.");
+        System.out.println("Local Area Network ist die "
+                + "Definition von LAN.");
         System.out.println("Es verbindet Netzwerkkomponenten zusammen, "
                 + "damit die miteinander Kommunizieren können.");
         System.out.println("LAN ist eine der ältesten "
@@ -30,8 +35,8 @@ public class Lan {
         System.out.println("Die aktuellste Kategorie ist Cat. 7.");
         System.out.println("Aber die aktuell am häufigsten verbreitete "
                 + "ist Cat. 5e oder Cat 6.");
-        System.out.println("Sind günstiger und haben noch den klassischen "
-                + "RJ-45 Anschluss.");
+        System.out.println("Sind günstiger und haben noch "
+                + "den klassischen RJ-45 Anschluss.");
         System.out.println("Die Clients werden über das Kabel mit einem "
                 + "Switch oder Router verbunden.");
         System.out.println("Ein Netzwerk ohne LAN wäre heute so "

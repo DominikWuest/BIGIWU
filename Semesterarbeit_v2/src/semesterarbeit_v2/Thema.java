@@ -12,11 +12,16 @@
 
  /*
     Klasse für die Auflistung der bekannten Themen.
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 
 public class Thema {
 
+    // Gibt dem User eine kurze Auflistungen seiner Ihm gekannten
+    // Themen zurück. Es sind nicht alle aufgeführt. Es gibt noch
+    // ein paar versteckte Funktion die der User selber finden kann
+    
     void detailiertThema() {
         System.out.println("Da ich leider noch keinen Zugriff zum Internet "
                 + "habe ist meine Auswahl beschränkt.");
@@ -25,12 +30,12 @@ public class Thema {
         System.out.println("-------------------");
         System.out.println("Netzwerk Generell--");
         System.out.println("Subnetzrechner-----");
-        System.out.println("Topologien---------"); // Done
-        System.out.println("Binärrechner-------"); // Done
+        System.out.println("Topologien---------"); 
+        System.out.println("Binärrechner-------"); 
         System.out.println("Firewall-----------");
         System.out.println("Switches-----------");
         System.out.println("Router-------------");
-        System.out.println("WLAN---------------"); // Done
+        System.out.println("WLAN---------------"); 
         System.out.println("LAN----------------");
         System.out.println("-------------------");
         

@@ -12,12 +12,15 @@
 
  /*
     Klasse für den Fragenkatalog Firewall
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 
 
 public class Firewall {
     
+    // Gibt dem User eine kurze eigene Zusammenfassung über die
+    // Firewall zurück.
     void detailiertFirewall(){
         System.out.println("Die Feuerwand. Ein wichtiger Bestandteil "
                 + "eines jeden Unternehmensnetzwerkes.");
@@ -25,7 +28,8 @@ public class Firewall {
                 + "Netzwerkkomponente welche sich zwischen dem "
                 + "Router und dem Coreswitch befindet.");
         System.out.println("Es soll die Sicherheit im Netzwerk steigern, "
-                + "in dem es jedes einzelne Paket welches ankommt überprüft.");
+                + "in dem es jedes einzelne Paket welches "
+                + "ankommt überprüft.");
         System.out.println("Entspricht das Paket nicht den Richtlinen, "
                 + "so wird dieses von der Firewall blockiert.");
         System.out.println("Zuhause wirst du wahrscheinlich keine "

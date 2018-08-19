@@ -12,11 +12,14 @@
 
  /*
     Klasse für den Fragenkatalog WLAN
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 
 public class Wlan {
 
+    // Gibt dem User eine kurze eigene Zusammenfassung über das
+    // WLAN zurück.
     void detailiertWlan() {
         System.out.println("WLAN steht für Wireless Local Area Network.");
         System.out.println("Hiermit ist eine 2.4 GHZ oder 5 GHZ "
@@ -29,5 +32,4 @@ public class Wlan {
         System.out.println("Er diente dafür um das freie WLAN attraktiv "
                 + "zu vermarkten.");
     }
-
 }

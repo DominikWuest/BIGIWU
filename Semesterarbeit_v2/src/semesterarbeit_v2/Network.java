@@ -12,11 +12,15 @@
 
  /*
     Klasse für den Fragenkatalog Netzwerk
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 
+
 public class Network {
     
+    // Gibt dem User eine kurze eigene Zusammenfassung über das Thema
+    // Netzwerk zurück.
     void detaliertNetwork (){
         System.out.println("Generells über Netzwerke.");
         System.out.println("Das Internet ist nichts weiter als ein "

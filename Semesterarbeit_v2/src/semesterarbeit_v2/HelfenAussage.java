@@ -12,6 +12,7 @@
 
  /*
     Klasse für die Helfen ansage. Gibt einen zufällgen Satz aus.
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 
@@ -19,6 +20,7 @@ import java.util.Random;
 
 public class HelfenAussage {
 
+    // initalisiere namen
     String nameUser;
 
 
@@ -31,10 +33,11 @@ public class HelfenAussage {
         String[] helfenAuswahl = {"Wie kann ich dir helfen " + nameUser + "?",
             "Was ist deine Frage " + nameUser + "?",
             nameUser + ", zu welchen Thema kann ich Auskunft geben?",
-            "Was kann ich für dich tun " + nameUser + "?"};
+            "Was kann ich für dich tun " + nameUser + "?",
+            nameUser + " ich bin bereit für eine neue Anfrage."};
 
         // Zufällige Auswahl eines Satzes
-        int helfenIndex = rndGen.nextInt(4);
+        int helfenIndex = rndGen.nextInt(5);
         // Ausgabe des Zufallssatzes
         System.out.println(helfenAuswahl[helfenIndex]);
 

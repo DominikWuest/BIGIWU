@@ -14,6 +14,7 @@
     Klasse für die Beschimpfung Aussage. Gibt einen 
     zufälligen Satz wieder.
     Wurde programmiert für die gemeinen Tester ;)
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 

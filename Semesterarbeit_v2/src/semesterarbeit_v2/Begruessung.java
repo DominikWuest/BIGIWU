@@ -11,7 +11,8 @@
  */
 
  /*
- * Begrüssung des Bots beim Start
+    Begrüssung des Bots beim Start
+    Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 
