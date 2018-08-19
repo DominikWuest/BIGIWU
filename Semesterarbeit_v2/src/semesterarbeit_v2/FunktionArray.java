@@ -9,7 +9,7 @@ package semesterarbeit_v2;
  *
  * @author gima
  */
-public class Utilities {
+public class FunktionArray {
    public static boolean uebereinstimungen(String[] woerter, String[] arrays) {
        if (woerter == null || arrays == null) {
            return false;

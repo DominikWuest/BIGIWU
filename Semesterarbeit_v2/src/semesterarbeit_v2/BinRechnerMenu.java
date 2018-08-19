@@ -42,12 +42,12 @@ public class BinRechnerMenu {
         String[] binDezArray = new String[]{"binaer"};
         String[] dezBinArray = new String[]{"dezimal"};
         
-        // Geht mit der Funktion Utilities durch die einzelnen Wörter.
-        if (Utilities.uebereinstimungen(words, binDezArray)) {
+        // Geht mit der Funktion FunktionArray durch die einzelnen Wörter.
+        if (FunktionArray.uebereinstimungen(words, binDezArray)) {
             System.out.println("Ich starte für dich den Binär zu "
             + "Dezimal Rechner");
             bin1.bintoDezRechner();
-        } else if (Utilities.uebereinstimungen(words, dezBinArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, dezBinArray)) {
             System.out.println("Ich starte für dich den Dezimal zu "
             + "Binär Rechner");
             bin1.deztoBinRechner();

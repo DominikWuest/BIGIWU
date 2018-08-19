@@ -132,70 +132,70 @@ public class FragenAntwort {
         // Findet er einen öffnet er die Methode die zum Array passt
         // und liefert dem User die Antwort.
         // Darstellung für A4 ausdruck zusammengerückt.
-        if (Utilities.uebereinstimungen(words, binrechnerArray)) {
+        if (FunktionArray.uebereinstimungen(words, binrechnerArray)) {
             System.out.println("Sehr gut, zum Thema Binaer und"
                     + " Dezimalrechner kann ich dir Auskunft"
                     + " geben " + nameUser + ".");
             binM1.binrechnerMenu();
-        } else if (Utilities.uebereinstimungen(words, subnetingArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, subnetingArray)) {
             System.out.println("Aber sicher doch " + nameUser + "."
                     + " Ich kann dir mit einem Subnetz "
                     + "und IP Rechner aushelfen.");
             subnet1.ipToNetmask();
-        } else if (Utilities.uebereinstimungen(words, themaArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, themaArray)) {
             System.out.println("Alles klar " + nameUser + ".");
             thema1.detailiertThema();
-        } else if (Utilities.uebereinstimungen(words, firewallArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, firewallArray)) {
             System.out.println("The Stage is on Fire! "
                     + nameUser + " das weiss ich zur Firewall.");
             firewall1.detailiertFirewall();
-        } else if (Utilities.uebereinstimungen(words, wlanArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, wlanArray)) {
             System.out.println("Zum Thema WLAN kann ich dir "
                     + "helfen " + nameUser + ".");
             wlan1.detailiertWlan();
-        } else if (Utilities.uebereinstimungen(words, nameArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, nameArray)) {
             System.out.println("Jaa jaaa " + nameUser + ". "
                     + "Fragen zu meinen Namen. ;) ");
             name1.detailiertName();
-        } else if (Utilities.uebereinstimungen(words, topologieArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, topologieArray)) {
             System.out.println("Das Thema Topologie finde ich "
                     + "auch spannend " + nameUser + ".");
             System.out.println("Hier meine Zusammenfassung.");
             top1.detailiertTopologien();
-        } else if (Utilities.uebereinstimungen(words, lanArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, lanArray)) {
             System.out.println("Classic. Lass mir dir LAN "
                     + "erklären " + nameUser + ".");
             lan1.detailiertLan();
-        } else if (Utilities.uebereinstimungen(words, switchArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, switchArray)) {
             System.out.println(nameUser + " zu Switchen "
                     + "weiss ich so einiges.");
             switch1.detailiertSwitch();
-        } else if (Utilities.uebereinstimungen(words, routerArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, routerArray)) {
             System.out.println("Fragen zum Wunderkasten, "
                     + "welcher Internet ins Haus bringt?");
             System.out.println("Die kann ich dir beantworten "
                     + nameUser + ".");
             router1.detailiertRouter();
-        } else if (Utilities.uebereinstimungen(words, networkArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, networkArray)) {
             System.out.println("Eine generelle kurze Erklärung?");
             System.out.println("Aber sicher doch " + nameUser + ".");
             network1.detaliertNetwork();
-        } else if (Utilities.uebereinstimungen(words, wetterArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, wetterArray)) {
             System.out.println(nameUser + " hast du keine "
                     + "Fenster bei dir?");
             System.out.println("Aber ja ich kann dir sagen wie "
                     + "das Wetter heute sein wird. "
                     + "Fast so gut wie Siri.");
             wetter1.detailiertWetter();
-        } else if (Utilities.uebereinstimungen(words, wohlbefindenBotArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, wohlbefindenBotArray)) {
             wohlbefindenBot1.wohlBot();
-        } else if (Utilities.uebereinstimungen(words, infoArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, infoArray)) {
             impressum1.infoImpressum();
-        } else if (Utilities.uebereinstimungen(words, witzArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, witzArray)) {
             witz1.witzeSammlung();
-        } else if (Utilities.uebereinstimungen(words, schimpfwortArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, schimpfwortArray)) {
             beschimpfung1.schimpfSammlung();
-        } else if (Utilities.uebereinstimungen(words, beendenArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, beendenArray)) {
             System.out.println("Ich hoffe ich konnte dir "
                     + "helfen " + nameUser + ".");
             System.out.println("Ich schliesse mich "

@@ -42,9 +42,9 @@ public class NoMatch {
         String[] googleArray = new String[]{"google", "suche",
             "internet", "search", "starten"};
 
-        if (Utilities.uebereinstimungen(words, nochmalsArray)) {
+        if (FunktionArray.uebereinstimungen(words, nochmalsArray)) {
             System.out.println("Dann nochmals.");
-        } else if (Utilities.uebereinstimungen(words, googleArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, googleArray)) {
             System.out.println("Ich starte die Google Suche.");
             try {
                 Thread.sleep(3000);
