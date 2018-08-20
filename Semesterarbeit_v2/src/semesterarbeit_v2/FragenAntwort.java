@@ -69,15 +69,15 @@ public class FragenAntwort {
         // Darstellung für Ausdruck auf A4 untereinander geschoben
         chatUser = mEingabe.nextLine();
         String[] words = chatUser.split(" ");
-        String[] binrechnerArray = new String[]{"binaer", "dezimal", "rechnen",
+        String[] binrechnerArray = new String[]{"binaer", "dezimal", "null",
             "eins", "nullen"};
 
         String[] subnetingArray = new String[]{"subnetz", "ip", "adresse",
             "adressen", "gateway", "broadcast", "subnetting",
-            "ipadressen", "ipadresse"};
+            "ipadressen", "ipadresse", "subnet"};
 
         String[] themaArray = new String[]{"thema", "katalog",
-            "themas", "themen"};
+            "themas", "themen", "wissensdatenbank"};
 
         String[] firewallArray = new String[]{"firewall", "ports",
             "trunk", "sicherheit", "blockieren"};
@@ -101,7 +101,7 @@ public class FragenAntwort {
             "internet", "anbieter", "provider"};
 
         String[] networkArray = new String[]{"netzwerk", "network", "generell",
-            "allgemein", "erklaerung"};
+            "allgemein"};
 
         String[] wetterArray = new String[]{"wetter", "sonne", "regen",
             "schnee", "kalt", "warm", "regenschirm", "jacke",
