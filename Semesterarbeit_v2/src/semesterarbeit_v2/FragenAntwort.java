@@ -32,7 +32,7 @@ public class FragenAntwort {
     Router router1 = new Router();
     Thema thema1 = new Thema();
     Network network1 = new Network();
-    Name name1 = new Name();
+    NameBot name1 = new NameBot();
     Wetter wetter1 = new Wetter();
     WohlbefindenBot wohlbefindenBot1 = new WohlbefindenBot();
     Witz witz1 = new Witz();
@@ -41,29 +41,19 @@ public class FragenAntwort {
     Beschimpfung beschimpfung1 = new Beschimpfung();
     HelfenAussage helfen1 = new HelfenAussage();
     NoMatch noMatch1 = new NoMatch();
+    
 
     //Initialisiere Scanner und Variabeln
     private Scanner mEingabe = new Scanner(System.in);
-    private String nameUser;
     private String chatUser;
 
     // Fragt nach dem Namen des Users
-    void frageName() {
 
-        System.out.println("Zuerst mal Hallo von meiner Seite.");
-        System.out.println("Mein Name ist Bigiwu-Bot.");
-        System.out.println("Wie lautet dein Name?");
-        nameUser = mEingabe.nextLine();
 
-        System.out.println("Dein Name lautet also " + nameUser + ".");
-        System.out.println("Naja meiner ist ja auch nicht besser...");
-
-    }
-
-    void chatPartner() {
+    void chatPartner(NameUser nameUser1) {
 
         // Fragt den User wie er ihm helfen kann
-        helfen1.helfenSammlung(nameUser);
+        helfen1.helfenSammlung(nameUser1.getNameUser());
 
         // Initialisiere Eingabe und Split der Wörter für Erkennung
         // Darstellung für Ausdruck auf A4 untereinander geschoben
@@ -74,7 +64,7 @@ public class FragenAntwort {
 
         String[] subnetingArray = new String[]{"subnetz", "ip", "adresse",
             "adressen", "gateway", "broadcast", "subnetting",
-            "ipadressen", "ipadresse", "subnet"};
+            "ipadressen", "ipadresse", "subnet", "subnetzrechner"};
 
         String[] themaArray = new String[]{"thema", "katalog",
             "themas", "themen", "wissensdatenbank"};
@@ -122,11 +112,6 @@ public class FragenAntwort {
             "cancel", "schluss", "schliessen", "aufhoeren", "beenden",
             "ciao", "adios", "bye"};
 
-        String[][] allArray = new String[][]{binrechnerArray, subnetingArray,
-            themaArray, firewallArray, wlanArray, nameArray, topologieArray,
-            lanArray, switchArray, beendenArray, routerArray, networkArray,
-            wetterArray, wohlbefindenBotArray, infoArray, witzArray,
-            schimpfwortArray};
 
         // Geht in die Funkton Uebereinstimmungen und prüft Wort für Wort
         // ob er in dem Vorgegeben Array einen Match hat.
@@ -134,60 +119,29 @@ public class FragenAntwort {
         // und liefert dem User die Antwort.
         
         if (FunktionArray.uebereinstimungen(words, binrechnerArray)) {
-            System.out.println("Sehr gut, zum Thema Binaer und"
-                    + " Dezimalrechner kann ich dir Auskunft"
-                    + " geben " + nameUser + ".");
-            binM1.binrechnerMenu();
+            binM1.binrechnerMenu(nameUser1);
         } else if (FunktionArray.uebereinstimungen(words, subnetingArray)) {
-            System.out.println("Aber sicher doch " + nameUser + "."
-                    + " Ich kann dir mit einem Subnetz "
-                    + "und IP Rechner aushelfen.");
-            subnet1.ipToNetmask();
+            subnet1.ipToNetmask(nameUser1);
         } else if (FunktionArray.uebereinstimungen(words, themaArray)) {
-            System.out.println("Alles klar " + nameUser + ".");
-            thema1.detailiertThema();
+            thema1.detailiertThema(nameUser1);
         } else if (FunktionArray.uebereinstimungen(words, firewallArray)) {
-            System.out.println("The Stage is on Fire! "
-                    + nameUser + " das weiss ich zur Firewall.");
-            firewall1.detailiertFirewall();
+            firewall1.detailiertFirewall(nameUser1);
         } else if (FunktionArray.uebereinstimungen(words, wlanArray)) {
-            System.out.println("Zum Thema WLAN kann ich dir "
-                    + "helfen " + nameUser + ".");
-            wlan1.detailiertWlan();
+            wlan1.detailiertWlan(nameUser1);
         } else if (FunktionArray.uebereinstimungen(words, nameArray)) {
-            System.out.println("Jaa jaaa " + nameUser + ". "
-                    + "Fragen zu meinen Namen. ;) ");
-            name1.detailiertName();
+            name1.detailiertName(nameUser1);
         } else if (FunktionArray.uebereinstimungen(words, topologieArray)) {
-            System.out.println("Das Thema Topologie finde ich "
-                    + "auch spannend " + nameUser + ".");
-            System.out.println("Hier meine Zusammenfassung.");
-            top1.detailiertTopologien();
+            top1.detailiertTopologien(nameUser1);
         } else if (FunktionArray.uebereinstimungen(words, lanArray)) {
-            System.out.println("Classic. Lass mir dir LAN "
-                    + "erklären " + nameUser + ".");
-            lan1.detailiertLan();
+            lan1.detailiertLan(nameUser1);
         } else if (FunktionArray.uebereinstimungen(words, switchArray)) {
-            System.out.println(nameUser + " zu Switchen "
-                    + "weiss ich so einiges.");
-            switch1.detailiertSwitch();
+            switch1.detailiertSwitch(nameUser1);
         } else if (FunktionArray.uebereinstimungen(words, routerArray)) {
-            System.out.println("Fragen zum Wunderkasten, "
-                    + "welcher Internet ins Haus bringt?");
-            System.out.println("Die kann ich dir beantworten "
-                    + nameUser + ".");
-            router1.detailiertRouter();
+            router1.detailiertRouter(nameUser1);
         } else if (FunktionArray.uebereinstimungen(words, networkArray)) {
-            System.out.println("Eine generelle kurze Erklärung?");
-            System.out.println("Aber sicher doch " + nameUser + ".");
-            network1.detaliertNetwork();
+            network1.detaliertNetwork(nameUser1);
         } else if (FunktionArray.uebereinstimungen(words, wetterArray)) {
-            System.out.println(nameUser + " hast du keine "
-                    + "Fenster bei dir?");
-            System.out.println("Aber ja ich kann dir sagen wie "
-                    + "das Wetter heute sein wird. "
-                    + "Fast so gut wie Siri.");
-            wetter1.detailiertWetter();
+            wetter1.detailiertWetter(nameUser1);
         } else if (FunktionArray.uebereinstimungen(words, wohlbefindenBotArray)) {
             wohlbefindenBot1.wohlBot();
         } else if (FunktionArray.uebereinstimungen(words, infoArray)) {
@@ -198,7 +152,7 @@ public class FragenAntwort {
             beschimpfung1.schimpfSammlung();
         } else if (FunktionArray.uebereinstimungen(words, beendenArray)) {
             System.out.println("Ich hoffe ich konnte dir "
-                    + "helfen " + nameUser + ".");
+                    + "helfen " + nameUser1.getNameUser() + ".");
             System.out.println("Ich schliesse mich "
                     + "nun für dich.");
             System.out.println("Bye bye!");

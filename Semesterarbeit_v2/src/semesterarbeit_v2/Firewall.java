@@ -16,12 +16,13 @@
  */
 package semesterarbeit_v2;
 
-
 public class Firewall {
-    
+
     // Gibt dem User eine kurze eigene Zusammenfassung über die
     // Firewall zurück.
-    void detailiertFirewall(){
+    void detailiertFirewall(NameUser nameUser1) {
+        System.out.println("The Stage is on Fire! "
+                + nameUser1.getNameUser() + " das weiss ich zur Firewall.");
         System.out.println("Die Feuerwand. Ein wichtiger Bestandteil "
                 + "eines jeden Unternehmensnetzwerkes.");
         System.out.println("Klassisch ist die Firewall eine "
@@ -43,5 +44,5 @@ public class Firewall {
         System.out.println("Die Firewall kann auch noch viele weitere "
                 + "Aufgaben übernehmen wie z.B. VPN, Traffic Controll");
     }
-    
+
 }

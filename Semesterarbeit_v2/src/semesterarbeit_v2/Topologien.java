@@ -20,7 +20,10 @@ public class Topologien {
 
     // Gibt dem User eine kurze eigene Zusammenfassung über die
     // Topologien zurück.
-    void detailiertTopologien() {
+    void detailiertTopologien(NameUser nameUser1) {
+        System.out.println("Das Thema Topologie finde ich "
+                + "auch spannend " + nameUser1.getNameUser() + ".");
+        System.out.println("Hier meine Zusammenfassung.");
 
         System.out.println("Die Topologie eines Rechnernetzes "
                 + "beschreibt die spezifische Anordnung");

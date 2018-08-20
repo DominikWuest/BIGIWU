@@ -17,10 +17,14 @@
 package semesterarbeit_v2;
 
 public class Router {
-    
+
     // Gibt dem User eine kurze eigene Zusammenfassung über den
     // Router zurück.
-    void detailiertRouter(){
+    void detailiertRouter(NameUser nameUser1) {
+        System.out.println("Fragen zum Wunderkasten, "
+                + "welcher Internet ins Haus bringt?");
+        System.out.println("Die kann ich dir beantworten "
+                + nameUser1.getNameUser() + ".");
         System.out.println("Der Router ist die mit Abstand wichtigste "
                 + "Komponente für ein Netzwerk mit Internetanschluss.");
         System.out.println("Früher hat man ein Modem "
@@ -51,5 +55,5 @@ public class Router {
                 + "einen WLAN Controller integriert, so dass man "
                 + "Zuhause auch WLAN hat.");
     }
-    
+
 }

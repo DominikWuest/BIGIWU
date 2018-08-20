@@ -22,7 +22,9 @@ public class Thema {
     // Themen zurück. Es sind nicht alle aufgeführt. Es gibt noch
     // ein paar versteckte Funktion die der User selber finden kann
     
-    void detailiertThema() {
+    void detailiertThema(NameUser nameUser1) {
+        
+        System.out.println("Alles klar " + nameUser1.getNameUser() + ".");
         System.out.println("Da ich leider noch keinen Zugriff zum Internet "
                 + "habe ist meine Auswahl beschränkt.");
         System.out.println("Aber zu diesen Themen kann ich dir helfen.");

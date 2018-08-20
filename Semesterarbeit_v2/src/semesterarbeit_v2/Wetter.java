@@ -24,7 +24,12 @@ package semesterarbeit_v2;
 
 public class Wetter {
 
-    void detailiertWetter() {
+    void detailiertWetter(NameUser nameUser1) {
+        System.out.println(nameUser1.getNameUser() + " hast du keine "
+                + "Fenster bei dir?");
+        System.out.println("Aber ja ich kann dir sagen wie "
+                + "das Wetter heute sein wird. "
+                + "Fast so gut wie Siri.");
 
         // User informieren das Suche in Google gestartet wird.
         System.out.println("Da ich auf deinem Notebook gefangen bin, "

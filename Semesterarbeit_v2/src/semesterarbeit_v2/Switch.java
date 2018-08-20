@@ -17,11 +17,12 @@
 package semesterarbeit_v2;
 
 public class Switch {
-    
+
     // Gibt dem User eine kurze eigene Zusammenfassung über den
     // Switch zurück.
-    
-    void detailiertSwitch(){
+    void detailiertSwitch(NameUser nameUser1) {
+        System.out.println(nameUser1.getNameUser() + " zu Switchen "
+                + "weiss ich so einiges.");
         System.out.println("Eine der wichtigsten "
                 + "Netzwerkkomponenten.");
         System.out.println("Ein Switch kann mit einem Hub "
@@ -38,7 +39,7 @@ public class Switch {
                 + "um die Verbindung.");
         System.out.println("Es gibt aber auch intelligente Switches, "
                 + "welche auch VLANs unterstützen.");
-        
+
     }
-    
+
 }

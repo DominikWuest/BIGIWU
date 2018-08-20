@@ -16,12 +16,14 @@
  */
 package semesterarbeit_v2;
 
-
 public class Network {
-    
+
     // Gibt dem User eine kurze eigene Zusammenfassung über das Thema
     // Netzwerk zurück.
-    void detaliertNetwork (){
+    void detaliertNetwork(NameUser nameUser1) {
+        System.out.println("Eine generelle kurze Erklärung?");
+        System.out.println("Aber sicher doch " + 
+                nameUser1.getNameUser() + ".");
         System.out.println("Generells über Netzwerke.");
         System.out.println("Das Internet ist nichts weiter als ein "
                 + "gigantisches Netzwerk.");
@@ -44,5 +46,5 @@ public class Network {
         System.out.println("Sie sind der Grundstein für die Kommunikation "
                 + "wie wir sie heute kennen und nutzen.");
     }
-    
+
 }

@@ -17,9 +17,11 @@
 package semesterarbeit_v2;
 
 // Antwort des Bots auf seine eigene Namensfindung
-public class Name {
+public class NameBot {
 
-    void detailiertName() {
+    void detailiertName(NameUser nameUser1) {
+        System.out.println("Jaa jaaa " + nameUser1.getNameUser() + ". "
+                + "Fragen zu meinen Namen. ;) ");
         System.out.println("Mein Name ist BiGiWu.");
         System.out.println("Du musst wissen, diesen Namen habe ich "
                 + "von meinen Erfindern erhalten.");

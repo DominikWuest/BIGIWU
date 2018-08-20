@@ -26,8 +26,8 @@ public class HelfenAussage {
 
     void helfenSammlung(String nameUser) {
         this.nameUser = nameUser;
-
-        // Generator implementieren
+ 
+       // Generator implementieren
         Random rndGen = new Random();
         // Mögliche Antworten
         String[] helfenAuswahl = {"Wie kann ich dir helfen " + nameUser + "?",

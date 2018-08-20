@@ -20,7 +20,9 @@ public class Wlan {
 
     // Gibt dem User eine kurze eigene Zusammenfassung über das
     // WLAN zurück.
-    void detailiertWlan() {
+    void detailiertWlan(NameUser nameUser1) {
+        System.out.println("Zum Thema WLAN kann ich dir "
+                + "helfen " + nameUser1.getNameUser() + ".");
         System.out.println("WLAN steht für Wireless Local Area Network.");
         System.out.println("Hiermit ist eine 2.4 GHZ oder 5 GHZ "
                 + "Funkverbindung gemeint, mit welcher Internet ohne");

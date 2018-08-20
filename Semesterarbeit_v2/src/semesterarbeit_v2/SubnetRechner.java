@@ -33,13 +33,16 @@ public class SubnetRechner {
     String[] beendenArray = new String[]{"beenden", "fertig",
         "nicht", "schliesse", "exit"};
 
-    void ipToNetmask() {
+    void ipToNetmask(NameUser nameUser1) {
 
         //Alle Variabeln initalisieren
         Scanner mEingabeAuswahl = new Scanner(System.in);
         String auswahlString;
         Boolean weiterMachen = true;
-
+        System.out.println("Aber sicher doch " + nameUser1.getNameUser() + "."
+                    + " Ich kann dir mit einem Subnetz "
+                    + "und IP Rechner aushelfen.");
+        
         System.out.println("Zum beenden des Rechners sag "
                 + "einfach Beenden :) ");
 
@@ -133,5 +136,7 @@ public class SubnetRechner {
 
         } while (weiterMachen == true);
     }
+
+    
 
 }

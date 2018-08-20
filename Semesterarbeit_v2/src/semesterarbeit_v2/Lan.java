@@ -17,10 +17,12 @@
 package semesterarbeit_v2;
 
 public class Lan {
-    
+
     // Gibt dem User eine kurze eigene Zusammenfassung über das Thema
     // LAN zurück.
-    void detailiertLan (){
+    void detailiertLan(NameUser nameUser1) {
+        System.out.println("Classic. Lass mir dir LAN "
+                + "erklären " + nameUser1.getNameUser() + ".");
         System.out.println("LAN ist das drahtgebundene "
                 + "Medium im Netzwerk.");
         System.out.println("Local Area Network ist die "
@@ -42,5 +44,5 @@ public class Lan {
         System.out.println("Ein Netzwerk ohne LAN wäre heute so "
                 + "nicht vorstellbar.");
     }
-    
+
 }
