@@ -122,7 +122,7 @@ public class SubnetRechner {
             System.out.println("Möchtest du weiter machen oder "
                     + "den IP Rechner beenden?");
             auswahlString = mEingabeAuswahl.nextLine();
-            String[] words = auswahlString.split(" ");
+            String[] words = auswahlString.split("\\W+");
 
             // Wörter überprüfen bei weiterArray Match nochmals ausführen
             // bei beendenArray weiterMachen auf false stellen und beenden

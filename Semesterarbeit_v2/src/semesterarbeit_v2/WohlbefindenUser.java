@@ -38,7 +38,7 @@ public class WohlbefindenUser {
         // Initialisiere Eingabe, Trenne Wörter separat 
         // damit jedes geprüft werden kann
         wohlbefindenUser = mEingabe.nextLine();
-        String[] words = wohlbefindenUser.split(" ");
+        String[] words = wohlbefindenUser.split("\\W+");
 
         /*
         Eingabe geht durch ein For each. Jedes Wort wird 

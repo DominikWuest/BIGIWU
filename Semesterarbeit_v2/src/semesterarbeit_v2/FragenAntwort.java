@@ -58,7 +58,9 @@ public class FragenAntwort {
         // Initialisiere Eingabe und Split der Wörter für Erkennung
         // Darstellung für Ausdruck auf A4 untereinander geschoben
         chatUser = mEingabe.nextLine();
-        String[] words = chatUser.split(" ");
+        // Splittet in einzelne Wörter. Erkennt auch Sonderzeichzen nach dem 
+        // Wort z.b. Witz? wird korrekt als Witz erkannt.
+        String[] words = chatUser.split("\\W+");
         String[] binrechnerArray = new String[]{"binaer", "dezimal", "null",
             "eins", "nullen"};
 

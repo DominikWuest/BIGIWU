@@ -41,8 +41,9 @@ public class BinRechnerMenu {
 
         // Initialisiere Eingabe
         chatUser = mEingabe.nextLine();
-        // Teilt die Eingabe auf Einzelne Wörter in ein Array auf
-        String[] words = chatUser.split(" ");
+        // Splittet in einzelne Wörter. Erkennt auch Sonderzeichzen nach dem 
+        // Wort z.b. Witz? wird korrekt als Witz erkannt.
+        String[] words = chatUser.split("\\W+");
         // Dem Bot bekanntes Antwort Array
         String[] binDezArray = new String[]{"binaer", "bin"};
         String[] dezBinArray = new String[]{"dezimal", "dez"};
