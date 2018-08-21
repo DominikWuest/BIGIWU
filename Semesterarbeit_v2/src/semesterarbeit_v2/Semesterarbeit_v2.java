@@ -29,7 +29,6 @@ public class Semesterarbeit_v2 {
         // Objekte aufrufen
         b1.botBegruessung();
         nameUser1.frageName();
-        //f1.frageName();
         u1.frageWohlbefinden();
 
         // True Schlaufe, damit egal aus welchem Menue man kommt es

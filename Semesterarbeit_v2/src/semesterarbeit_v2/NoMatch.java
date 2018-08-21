@@ -44,7 +44,12 @@ public class NoMatch {
 
         // Arrays und Eingabe initalisieren
         sucheAntwort = mEingabe.nextLine();
-        String[] words = sucheAntwort.split(" ");
+        // Splittet in einzelne Wörter. Erkennt auch Sonderzeichzen nach dem 
+        // Wort z.b. Netzwerk? wird korrekt als Netzwerk erkannt.
+        // REGEX \\W+
+        String[] words = sucheAntwort.split("\\W+");
+        
+        // Mögliche Antworten Array
         String[] nochmalsArray = new String[]{"nochmals", "vertippt",
             "noch", "mal", "typo", "normal", "bot", "eingeben"};
         String[] googleArray = new String[]{"google", "suche",

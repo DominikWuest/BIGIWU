@@ -14,6 +14,7 @@
     Klasse für Funktion FunktionArray. Die Funktion überprüft den Wörter
     String und sucht in dem Array nach einem passenden Wort. Findet er
     eines gibt er true zurück. Findet er keine gibt er false zurück.
+    Er bricht die Suche ab, sobald er einen passenden Match hat.
     Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;

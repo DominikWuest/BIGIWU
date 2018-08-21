@@ -53,13 +53,14 @@ public class FragenAntwort {
     void chatPartner(NameUser nameUser1) {
 
         // Fragt den User wie er ihm helfen kann
-        helfen1.helfenSammlung(nameUser1.getNameUser());
+        helfen1.helfenSammlung(nameUser1);
 
         // Initialisiere Eingabe und Split der Wörter für Erkennung
-        // Darstellung für Ausdruck auf A4 untereinander geschoben
+        
         chatUser = mEingabe.nextLine();
         // Splittet in einzelne Wörter. Erkennt auch Sonderzeichzen nach dem 
-        // Wort z.b. Witz? wird korrekt als Witz erkannt.
+        // Wort z.b. Netzwerk? wird korrekt als Netzwerk erkannt.
+        // REGEX \\W+
         String[] words = chatUser.split("\\W+");
         String[] binrechnerArray = new String[]{"binaer", "dezimal", "null",
             "eins", "nullen"};

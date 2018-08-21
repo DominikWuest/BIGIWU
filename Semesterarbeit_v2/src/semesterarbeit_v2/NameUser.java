@@ -20,18 +20,22 @@ package semesterarbeit_v2;
 import java.util.Scanner;
 
 public class NameUser {
-
+    
+    // Initialisiere Variabeln
     private String nameUser;
     private Scanner mEingabe = new Scanner(System.in);
-
+    
+    // Getter für Name
     public String getNameUser() {
         return nameUser;
     }
 
+    // Setter für Name
     public void setNameUser(String nameUser) {
         this.nameUser = nameUser;
     }
 
+    // Fragt User nach seinem Namen und speichert diesen ab.
     void frageName() {
 
         System.out.println("Zuerst mal Hallo von meiner Seite.");

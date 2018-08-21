@@ -48,7 +48,7 @@ public class BinaerRechner {
         //Wenn weiterMachen boolean false, dann Programm beenden
         do {
 
-            System.out.println("Bitte gebe einen binären String ein:");
+            System.out.println("Bitte gebe einen binären String ein: (0/1)");
 
             bitstring = mEingabeZahl.nextLine();
             // Länge prüfen, falls nicht 32-Bit Fehler melden
@@ -72,17 +72,18 @@ public class BinaerRechner {
 
             // Frage nach fortführung des Rechners
             // NextLine initalisieren, Wörter aufteilen in neues Array
-            
             System.out.println("Möchtest du weiter machen "
                     + "oder den Rechner beenden?");
             auswahlString = mEingabeAuswahl.nextLine();
+            // Splittet in einzelne Wörter. Erkennt auch 
+            // Sonderzeichzen nach dem 
+            // Wort z.b. Netzwerk? wird korrekt als Netzwerk erkannt.
+            // REGEX \\W+
             String[] words = auswahlString.split("\\W+");
-            
 
             // Wörter überprüfen bei weiterArray Match nochmals ausführen
             // bei beendenArray weiterMachen auf false stellen und beenden
             // Mithilfe der Funktion FunktionArray überprüft
-            
             if (FunktionArray.uebereinstimungen(words, weiterArray)) {
                 System.out.println("Ok.");
             } else if (FunktionArray.uebereinstimungen(words, beendenArray)) {
@@ -111,16 +112,14 @@ public class BinaerRechner {
 
             //Frage nach fortführung des Rechners
             //NextLine initalisieren, Wörter aufteilen in neues Array
-            
             auswahlString = mEingabeAuswahl.nextLine();
             String[] words = auswahlString.split(" ");
 
             // Wörter überprüfen bei weiterArray Match nochmals ausführen
             // bei beendenArray weiterMachen auf false stellen und beenden
             // Mithilfe der Funktion FunktionArray überprüft
-            
             if (FunktionArray.uebereinstimungen(words, weiterArray)) {
-                System.out.println("Ok.");
+                System.out.println("Machen wir weiter.");
             } else if (FunktionArray.uebereinstimungen(words, beendenArray)) {
                 System.out.println("Ich beende den Rechner für dich.");
                 weiterMachen = false;

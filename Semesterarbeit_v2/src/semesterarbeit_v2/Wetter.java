@@ -41,7 +41,8 @@ public class Wetter {
             Thread.currentThread().interrupt();
         }
 
-        // Frage welche an Google gestellt wird.
+        // Frage welche an Google gestellt wird. In diesem Fall ist
+        // Wetter heute fest definiert.
         String question = "Wetter heute";
 
         question = question.replace(' ', '+');

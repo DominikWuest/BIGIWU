@@ -11,13 +11,15 @@
  */
 
  /*
-    Klasse für das Impressum
+    Klasse für das Impressum.
+    Zeigt ein kleines Impressum von unserer Semesterarbeit an.
     Alle Darstellungen für A4 Ausdruck zusammengerückt.
  */
 package semesterarbeit_v2;
 
 public class Impressum {
     
+    // Ausgabe des Impressums
     void infoImpressum(){
         
         System.out.println("---------------------------------");

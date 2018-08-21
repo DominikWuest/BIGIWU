@@ -40,16 +40,16 @@ public class SubnetRechner {
         String auswahlString;
         Boolean weiterMachen = true;
         System.out.println("Aber sicher doch " + nameUser1.getNameUser() + "."
-                    + " Ich kann dir mit einem Subnetz "
-                    + "und IP Rechner aushelfen.");
-        
+                + " Ich kann dir mit einem Subnetz "
+                + "und IP Rechner aushelfen.");
+
         System.out.println("Zum beenden des Rechners sag "
                 + "einfach Beenden :) ");
 
         //Für mindestens einen Durchlauf eine Do-While Schlaufe
         //Wenn weiterMachen boolean false, dann Programm beenden
         do {
-            System.out.println("Gebe eine IP-Adresse ein: ");
+            System.out.println("Gebe eine IP-Adresse ein: xxx.xxx.xxx.xxx");
             Scanner IpEingabe = new Scanner(System.in);
             String ip = IpEingabe.nextLine();
             String[] ipOktett = ip.split("\\."); // \\. = RegEx für .
@@ -60,7 +60,7 @@ public class SubnetRechner {
 
             }
 
-            System.out.println("Gebe die Subnetzmaske ein: ");
+            System.out.println("Gebe die Subnetzmaske ein: 255.xxx.xxx.xxx");
             Scanner SubEingabe = new Scanner(System.in);
             String subnetmask = SubEingabe.nextLine();
             String[] subOktett = subnetmask.split("\\."); // \\. = RegEx für .
@@ -122,6 +122,10 @@ public class SubnetRechner {
             System.out.println("Möchtest du weiter machen oder "
                     + "den IP Rechner beenden?");
             auswahlString = mEingabeAuswahl.nextLine();
+            
+            // Splittet in einzelne Wörter. Erkennt auch Sonderzeichzen nach dem 
+            // Wort z.b. Netzwerk? wird korrekt als Netzwerk erkannt.
+            // REGEX \\W+
             String[] words = auswahlString.split("\\W+");
 
             // Wörter überprüfen bei weiterArray Match nochmals ausführen
@@ -136,7 +140,5 @@ public class SubnetRechner {
 
         } while (weiterMachen == true);
     }
-
-    
 
 }
