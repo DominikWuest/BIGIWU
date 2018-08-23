@@ -75,7 +75,7 @@ public class FragenAntwort {
         String[] firewallArray = new String[]{"firewall", "ports",
             "trunk", "sicherheit", "blockieren"};
 
-        String[] wlanArray = new String[]{"wifi", "wlan", "ghz", "drathlos"};
+        String[] wlanArray = new String[]{"wifi", "wlan", "ghz", "drathlos", "w-lan"};
 
         String[] nameArray = new String[]{"name", "heisst",
             "gigachatbot3000", "bigiwu"};

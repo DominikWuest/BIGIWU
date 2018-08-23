@@ -48,7 +48,7 @@ public class BinaerRechner {
         //Wenn weiterMachen boolean false, dann Programm beenden
         do {
 
-            System.out.println("Bitte gebe einen binären String ein: (0/1)");
+            System.out.println("Bitte gib einen binären String ein: (0/1)");
 
             bitstring = mEingabeZahl.nextLine();
             // Länge prüfen, falls nicht 32-Bit Fehler melden

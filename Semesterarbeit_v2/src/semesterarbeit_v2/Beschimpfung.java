@@ -30,7 +30,7 @@ public class Beschimpfung {
         // Mögliche Antworten
         String[] beschimpfungAuswahl = {"Nana, nicht in diesem Ton.", 
             "Das ist nicht sehr nett.", 
-            "Ach komm ich will dir nur helfen.", 
+            "Ach komm, ich will dir doch nur helfen.", 
             "Echt jetzt?"};
         // Zufällige Auswahl eines Satzes
         int beschimpfungIndex = rndGen.nextInt(4);

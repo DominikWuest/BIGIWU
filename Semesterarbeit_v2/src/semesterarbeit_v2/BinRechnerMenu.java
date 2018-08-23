@@ -53,11 +53,11 @@ public class BinRechnerMenu {
         // Findet er ein passendes Wort führt er die Aktion aus
         if (FunktionArray.uebereinstimungen(words, binDezArray)) {
             System.out.println("Ich starte für dich den Binär zu "
-                    + "Dezimal Rechner");
+                    + "Dezimal-Rechner");
             bin1.bintoDezRechner();
         } else if (FunktionArray.uebereinstimungen(words, dezBinArray)) {
             System.out.println("Ich starte für dich den Dezimal zu "
-                    + "Binär Rechner");
+                    + "Binär-Rechner");
             bin1.deztoBinRechner();
         }
 
