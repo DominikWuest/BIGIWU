@@ -68,7 +68,8 @@ public class FragenAntwort {
         // ob er in dem Vorgegeben Array einen Match hat.
         // Findet er einen öffnet er die Methode die zum Array passt
         // und liefert dem User die Antwort.
-        
+        // Arrays mit möglichen Antowrten sind in der Klasse 
+        // StringArrays definiert.
         if (FunktionArray.uebereinstimungen(words, StringArrays.binrechnerArray)) {
             binM1.binrechnerMenu(nameUser1);
         } else if (FunktionArray.uebereinstimungen(words, StringArrays.subnetingArray)) {

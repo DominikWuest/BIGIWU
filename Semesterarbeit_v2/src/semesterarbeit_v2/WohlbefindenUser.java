@@ -61,17 +61,6 @@ public class WohlbefindenUser {
         Boolean negativBoolean = false;
         Boolean verneinungBoolean = false;
 
-        // Arrays für gesuchte Schlüsselwörter
-        String[] positivesArray = new String[]{"gut", "ausgezeichnet",
-            "super", "perfekt", "gesund", "angenehm", "schoener",
-            "geht", "keine", "heil", "reich", "schoen",
-            "ausgeschlafen"};
-        String[] negativesArray = new String[]{"schlecht", "solala",
-            "miserabel", "katastrophal", "krank", "schlimm", "uebel",
-            "böse", "krankheit", "scheisse", "mau", "kaputt", "muede",
-            "grauenhaft", "beschissen"};
-        String[] verneinungenArray = new String[]{"nicht", "ned"};
-
         /*
          Aufgrund eines Logikfehlers kann hier nicht die
          Funktion FunktionArray verwendet werdne.
@@ -81,7 +70,7 @@ public class WohlbefindenUser {
         // Jedes Wort wird geprüft und die Booleans geändert
         for (String word : words) {
             // prüft ob positiv vorhanden
-            for (String positive : positivesArray) {
+            for (String positive : StringArrays.positivesArray) {
                 if (word.equalsIgnoreCase(positive)) {
                     positivBoolean = true;
                 }
@@ -89,7 +78,7 @@ public class WohlbefindenUser {
         }
         for (String word : words) {
             // prüft ob negativ vorhanden
-            for (String negative : negativesArray) {
+            for (String negative : StringArrays.negativesArray) {
                 if (word.equalsIgnoreCase(negative)) {
                     negativBoolean = true;
                 }
@@ -98,7 +87,7 @@ public class WohlbefindenUser {
         for (String word : words) {
             // prüft ob verneinung vorhanden
             // Erkennt so mehrfach verneinungen
-            for (String verneinung : verneinungenArray) {
+            for (String verneinung : StringArrays.verneinungenArray) {
                 if (word.equalsIgnoreCase(verneinung)) {
                     verneinungBoolean = !verneinungBoolean;
 

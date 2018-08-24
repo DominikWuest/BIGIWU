@@ -27,12 +27,6 @@ import java.util.Scanner;
 
 public class SubnetRechner {
 
-    // Arrays für überprüfung initialisieren
-    String[] weiterArray = new String[]{"weiter", "weitermachen",
-        "naechste", "Zahl", "nochmals"};
-    String[] beendenArray = new String[]{"beenden", "fertig",
-        "nicht", "schliesse", "exit"};
-
     void ipToNetmask(NameUser nameUser1) {
 
         //Alle Variabeln initalisieren
@@ -122,7 +116,7 @@ public class SubnetRechner {
             System.out.println("Möchtest du weiter machen oder "
                     + "den IP Rechner beenden?");
             auswahlString = mEingabeAuswahl.nextLine();
-            
+
             // Splittet in einzelne Wörter. Erkennt auch Sonderzeichzen nach dem 
             // Wort z.b. Netzwerk? wird korrekt als Netzwerk erkannt.
             // REGEX \\W+
@@ -130,10 +124,12 @@ public class SubnetRechner {
 
             // Wörter überprüfen bei weiterArray Match nochmals ausführen
             // bei beendenArray weiterMachen auf false stellen und beenden
-            // Mithilfe der Funktion FunktionArray überprüft
-            if (FunktionArray.uebereinstimungen(words, weiterArray)) {
+            // Mithilfe der Funktion FunktionArray überprüft.
+            // Arrays mit möglichen Antowrten sind in der Klasse 
+            // StringArrays definiert.
+            if (FunktionArray.uebereinstimungen(words, StringArrays.weiterArray)) {
                 System.out.println("Dann noch ein Mal.");
-            } else if (FunktionArray.uebereinstimungen(words, beendenArray)) {
+            } else if (FunktionArray.uebereinstimungen(words, StringArrays.exitMethodeArray)) {
                 System.out.println("Ich beende den Rechner für dich.");
                 weiterMachen = false;
             }

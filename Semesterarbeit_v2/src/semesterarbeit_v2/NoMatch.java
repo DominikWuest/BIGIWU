@@ -48,21 +48,18 @@ public class NoMatch {
         // Wort z.b. Netzwerk? wird korrekt als Netzwerk erkannt.
         // REGEX \\W+
         String[] words = sucheAntwort.split("\\W+");
-        
-        // Mögliche Antworten Array
-        String[] nochmalsArray = new String[]{"nochmals", "vertippt",
-            "noch", "mal", "typo", "normal", "bot", "eingeben"};
-        String[] googleArray = new String[]{"google", "suche",
-            "internet", "search", "starten"};
 
         // Geht mit der Funktion FunktionArray durch die einzelnen Wörter
         // Findet er ein passendes Wort im Array führt 
-        // er die Aktion aus
+        // er die Aktion aus. 
+        // Arrays mit möglichen Antowrten sind in der Klasse 
+        // StringArrays definiert.
+        
         // Falls nochmals
-        if (FunktionArray.uebereinstimungen(words, nochmalsArray)) {
+        if (FunktionArray.uebereinstimungen(words, StringArrays.nochmalsArray)) {
             System.out.println("Dann nochmals.");
             // Falls Google gestartet werden soll
-        } else if (FunktionArray.uebereinstimungen(words, googleArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.googleArray)) {
             System.out.println("Ich starte die Google Suche.");
             try {
                 Thread.sleep(3000); // Sleep für 3 Sekunden damit User
