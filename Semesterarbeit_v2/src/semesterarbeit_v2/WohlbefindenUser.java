@@ -67,6 +67,8 @@ public class WohlbefindenUser {
          Diese bricht nach einem Match ab, so wäre die
          mehrfache Verneinung nicht gewährleistet.
          */
+        // Arrays mit möglichen Antowrten sind in der Klasse 
+        // StringArrays definiert.
         // Jedes Wort wird geprüft und die Booleans geändert
         for (String word : words) {
             // prüft ob positiv vorhanden
