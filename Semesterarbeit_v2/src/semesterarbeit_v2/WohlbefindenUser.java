@@ -102,7 +102,7 @@ public class WohlbefindenUser {
             // Verneinung gefunden
             if (verneinungBoolean == true) {
                 System.out.println("Schade aber auch das geht vorüber."
-                        + " Think positiv :) ");
+                        + " Think positive :) ");
                 // Keine Verneinung gefunden
             } else {
                 System.out.println("Gut zu hören mein Code hat keine Bugs "
@@ -113,7 +113,7 @@ public class WohlbefindenUser {
         if (negativBoolean == true) {
             // Verneinung gefunden 
             if (verneinungBoolean == true) {
-                System.out.println("Sehr schön, meinen Code geht es auch "
+                System.out.println("Sehr schön, meinem Code geht es auch "
                         + "prächtig :) ");
                 // Keine Verneinung gefunden
             } else {

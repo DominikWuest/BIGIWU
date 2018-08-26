@@ -68,7 +68,7 @@ public class StringArrays {
         "lachen", "fun", "funny", "witzig", "witziges"};
 
     public static String[] infoArray = new String[]{"urheber", "copyright",
-        "impressum", "about"};
+        "impressum", "about", "mehr erfahren", "über dich"};
 
     public static String[] schimpfwortArray = new String[]{"scheisse", "bloed", "doof",
         "mist", "dumm"};
@@ -96,8 +96,7 @@ public class StringArrays {
     // WohlbefindenUser
     public static String[] positivesArray = new String[]{"gut", "ausgezeichnet",
         "super", "perfekt", "gesund", "angenehm", "schoener",
-        "geht", "keine", "heil", "reich", "schoen",
-        "ausgeschlafen"};
+        "geht", "keine", "heil", "reich", "schoen", "ausgeschlafen", "glücklich"};
     public static String[] negativesArray = new String[]{"schlecht", "solala",
         "miserabel", "katastrophal", "krank", "schlimm", "uebel",
         "böse", "krankheit", "scheisse", "mau", "kaputt", "muede",
