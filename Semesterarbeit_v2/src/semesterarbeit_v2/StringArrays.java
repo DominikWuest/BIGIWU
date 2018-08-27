@@ -28,7 +28,7 @@ public class StringArrays {
         "adressen", "gateway", "broadcast", "subnetting",
         "ipadressen", "ipadresse", "subnet", "subnetzrechner",
         "subnetzmaske", "maske", "iprechner", "ipadresse", "ipadressen",
-        "gatewayadresse", "broadcastadresse"};
+        "gatewayadresse", "broadcastadresse", "subnetzadresse"};
 
     public static String[] themaArray = new String[]{"thema", "katalog",
         "themas", "themen", "wissensdatenbank"};
@@ -96,11 +96,12 @@ public class StringArrays {
     // WohlbefindenUser
     public static String[] positivesArray = new String[]{"gut", "ausgezeichnet",
         "super", "perfekt", "gesund", "angenehm", "schoener",
-        "geht", "keine", "heil", "reich", "schoen", "ausgeschlafen", "glücklich"};
+        "geht", "keine", "heil", "reich", "schoen", "ausgeschlafen", 
+        "glücklich", "good"};
     public static String[] negativesArray = new String[]{"schlecht", "solala",
         "miserabel", "katastrophal", "krank", "schlimm", "uebel",
         "böse", "krankheit", "scheisse", "mau", "kaputt", "muede",
-        "grauenhaft", "beschissen", "hungrig", "hunger"};
-    public static String[] verneinungenArray = new String[]{"nicht", "ned"};
+        "grauenhaft", "beschissen", "hungrig", "hunger", "naja", "bad"};
+    public static String[] verneinungenArray = new String[]{"nicht", "ned", "not"};
 
 }
