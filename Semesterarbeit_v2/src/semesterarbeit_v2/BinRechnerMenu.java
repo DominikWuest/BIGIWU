@@ -45,19 +45,18 @@ public class BinRechnerMenu {
         // Wort z.b. Netzwerk? wird korrekt als Netzwerk erkannt.
         // REGEX \\W+
         String[] words = chatUser.split("\\W+");
-        // Dem Bot bekanntes Antwort Array
-        String[] binDezArray = new String[]{"binaer", "bin"};
-        String[] dezBinArray = new String[]{"dezimal", "dez"};
 
         // Geht mit der Funktion FunktionArray durch die einzelnen Wörter
         // Findet er ein passendes Wort führt er die Aktion aus
-        if (FunktionArray.uebereinstimungen(words, binDezArray)) {
+        // Arrays mit möglichen Antowrten sind in der Klasse 
+        // StringArrays definiert.
+        if (FunktionArray.uebereinstimungen(words, StringArrays.binDezArray)) {
             System.out.println("Ich starte für dich den Binär zu "
-                    + "Dezimal Rechner");
+                    + "Dezimal-Rechner");
             bin1.bintoDezRechner();
-        } else if (FunktionArray.uebereinstimungen(words, dezBinArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.dezBinArray)) {
             System.out.println("Ich starte für dich den Dezimal zu "
-                    + "Binär Rechner");
+                    + "Binär-Rechner");
             bin1.deztoBinRechner();
         }
 

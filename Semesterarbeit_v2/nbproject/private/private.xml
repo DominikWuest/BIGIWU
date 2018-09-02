@@ -3,9 +3,30 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/D:/Marek/Git/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/FragenAntwort.java</file>
             <file>file:/D:/Marek/Git/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/Semesterarbeit_v2.java</file>
             <file>file:/D:/Marek/Git/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/BinaerRechner.java</file>
+=======
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/BinRechnerMenu.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/FragenAntwort.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/Semesterarbeit_v2.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/Wlan.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/WohlbefindenUser.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/NameBot.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/Network.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/Witz.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/BinaerRechner.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/Router.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/Thema.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/NameUser.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/StringArrays.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/WohlbefindenBot.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/Wetter.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/NoMatch.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/Lan.java</file>
+            <file>file:/C:/Users/gima/Documents/GitHub/BIGIWU/Semesterarbeit_v2/src/semesterarbeit_v2/SubnetRechner.java</file>
+>>>>>>> 77305d91c46de2f5ff2dfc046b131d73832549c0
         </group>
     </open-files>
 </project-private>

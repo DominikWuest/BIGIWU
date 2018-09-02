@@ -33,12 +33,6 @@ public class BinaerRechner {
     String auswahlString;
     Boolean weiterMachen = true;
 
-    // Arrays für überprüfung initialisieren
-    String[] weiterArray = new String[]{"weiter", "weitermachen",
-        "naechste", "Zahl", "nochmals"};
-    String[] beendenArray = new String[]{"beenden", "fertig",
-        "nicht", "schliesse", "exit"};
-
     void bintoDezRechner() {
 
         System.out.println("Zum beenden des Rechners sag "
@@ -48,7 +42,7 @@ public class BinaerRechner {
         //Wenn weiterMachen boolean false, dann Programm beenden
         do {
 
-            System.out.println("Bitte gebe einen binären String ein: (0/1)");
+            System.out.println("Bitte gib einen binären String ein: (0/1)");
 
             bitstring = mEingabeZahl.nextLine();
             // Länge prüfen, falls nicht 32-Bit Fehler melden
@@ -84,9 +78,11 @@ public class BinaerRechner {
             // Wörter überprüfen bei weiterArray Match nochmals ausführen
             // bei beendenArray weiterMachen auf false stellen und beenden
             // Mithilfe der Funktion FunktionArray überprüft
-            if (FunktionArray.uebereinstimungen(words, weiterArray)) {
+            // Arrays mit möglichen Antowrten sind in der Klasse 
+            // StringArrays definiert.
+            if (FunktionArray.uebereinstimungen(words, StringArrays.weiterArray)) {
                 System.out.println("Ok.");
-            } else if (FunktionArray.uebereinstimungen(words, beendenArray)) {
+            } else if (FunktionArray.uebereinstimungen(words, StringArrays.exitMethodeArray)) {
                 System.out.println("Ich beende den Rechner für dich.");
                 weiterMachen = false;
             }
@@ -118,9 +114,11 @@ public class BinaerRechner {
             // Wörter überprüfen bei weiterArray Match nochmals ausführen
             // bei beendenArray weiterMachen auf false stellen und beenden
             // Mithilfe der Funktion FunktionArray überprüft
-            if (FunktionArray.uebereinstimungen(words, weiterArray)) {
+            // Arrays mit möglichen Antowrten sind in der Klasse 
+            // StringArrays definiert.
+            if (FunktionArray.uebereinstimungen(words, StringArrays.weiterArray)) {
                 System.out.println("Machen wir weiter.");
-            } else if (FunktionArray.uebereinstimungen(words, beendenArray)) {
+            } else if (FunktionArray.uebereinstimungen(words, StringArrays.exitMethodeArray)) {
                 System.out.println("Ich beende den Rechner für dich.");
                 weiterMachen = false;
             }

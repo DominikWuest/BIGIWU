@@ -62,98 +62,47 @@ public class FragenAntwort {
         // Wort z.b. Netzwerk? wird korrekt als Netzwerk erkannt.
         // REGEX \\W+
         String[] words = chatUser.split("\\W+");
-        String[] binrechnerArray = new String[]{"binaer", "dezimal", "null",
-            "eins", "nullen"};
-
-        String[] subnetingArray = new String[]{"subnetz", "ip", "adresse",
-            "adressen", "gateway", "broadcast", "subnetting",
-            "ipadressen", "ipadresse", "subnet", "subnetzrechner"};
-
-        String[] themaArray = new String[]{"thema", "katalog",
-            "themas", "themen", "wissensdatenbank"};
-
-        String[] firewallArray = new String[]{"firewall", "ports",
-            "trunk", "sicherheit", "blockieren"};
-
-        String[] wlanArray = new String[]{"wifi", "wlan", "ghz", "drathlos"};
-
-        String[] nameArray = new String[]{"name", "heisst",
-            "gigachatbot3000", "bigiwu"};
-
-        String[] topologieArray = new String[]{"topologie", "stern",
-            "daisychain", "bus", "mesh", "line", "zusammenschliessen",
-            "token", "ring", "tokenring", "tree"};
-
-        String[] lanArray = new String[]{"lan", "ethernet", "cat",
-            "drahtgebundene", "patch"};
-
-        String[] switchArray = new String[]{"switch", "ports",
-            "ethernetconnection", "verbindung"};
-
-        String[] routerArray = new String[]{"router", "internetverbindung",
-            "internet", "anbieter", "provider"};
-
-        String[] networkArray = new String[]{"netzwerk", "network", "generell",
-            "allgemein"};
-
-        String[] wetterArray = new String[]{"wetter", "sonne", "regen",
-            "schnee", "kalt", "warm", "regenschirm", "jacke",
-            "schneit", "regnet"};
-
-        String[] wohlbefindenBotArray = new String[]{"geht", "fuehlst",
-            "gefuehle"};
-
-        String[] witzArray = new String[]{"witz", "lustig", "lachen"};
-
-        String[] infoArray = new String[]{"urheber", "copyright",
-            "impressum", "about"};
-
-        String[] schimpfwortArray = new String[]{"scheisse", "bloed", "doof",
-            "mist", "dumm"};
-
-        String[] beendenArray = new String[]{"fertig", "exit", "quit",
-            "cancel", "schluss", "schliessen", "aufhoeren", "beenden",
-            "ciao", "adios", "bye"};
-
+        
 
         // Geht in die Funkton Uebereinstimmungen und prüft Wort für Wort
         // ob er in dem Vorgegeben Array einen Match hat.
         // Findet er einen öffnet er die Methode die zum Array passt
         // und liefert dem User die Antwort.
-        
-        if (FunktionArray.uebereinstimungen(words, binrechnerArray)) {
+        // Arrays mit möglichen Antowrten sind in der Klasse 
+        // StringArrays definiert.
+        if (FunktionArray.uebereinstimungen(words, StringArrays.binrechnerArray)) {
             binM1.binrechnerMenu(nameUser1);
-        } else if (FunktionArray.uebereinstimungen(words, subnetingArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.subnetingArray)) {
             subnet1.ipToNetmask(nameUser1);
-        } else if (FunktionArray.uebereinstimungen(words, themaArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.themaArray)) {
             thema1.detailiertThema(nameUser1);
-        } else if (FunktionArray.uebereinstimungen(words, firewallArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.firewallArray)) {
             firewall1.detailiertFirewall(nameUser1);
-        } else if (FunktionArray.uebereinstimungen(words, wlanArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.wlanArray)) {
             wlan1.detailiertWlan(nameUser1);
-        } else if (FunktionArray.uebereinstimungen(words, nameArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.nameArray)) {
             name1.detailiertName(nameUser1);
-        } else if (FunktionArray.uebereinstimungen(words, topologieArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.topologieArray)) {
             top1.detailiertTopologien(nameUser1);
-        } else if (FunktionArray.uebereinstimungen(words, lanArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.lanArray)) {
             lan1.detailiertLan(nameUser1);
-        } else if (FunktionArray.uebereinstimungen(words, switchArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.switchArray)) {
             switch1.detailiertSwitch(nameUser1);
-        } else if (FunktionArray.uebereinstimungen(words, routerArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.routerArray)) {
             router1.detailiertRouter(nameUser1);
-        } else if (FunktionArray.uebereinstimungen(words, networkArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.networkArray)) {
             network1.detaliertNetwork(nameUser1);
-        } else if (FunktionArray.uebereinstimungen(words, wetterArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.wetterArray)) {
             wetter1.detailiertWetter(nameUser1);
-        } else if (FunktionArray.uebereinstimungen(words, wohlbefindenBotArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.wohlbefindenBotArray)) {
             wohlbefindenBot1.wohlBot();
-        } else if (FunktionArray.uebereinstimungen(words, infoArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.infoArray)) {
             impressum1.infoImpressum();
-        } else if (FunktionArray.uebereinstimungen(words, witzArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.witzArray)) {
             witz1.witzeSammlung();
-        } else if (FunktionArray.uebereinstimungen(words, schimpfwortArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.schimpfwortArray)) {
             beschimpfung1.schimpfSammlung();
-        } else if (FunktionArray.uebereinstimungen(words, beendenArray)) {
+        } else if (FunktionArray.uebereinstimungen(words, StringArrays.beendenArray)) {
             System.out.println("Ich hoffe ich konnte dir "
                     + "helfen " + nameUser1.getNameUser() + ".");
             System.out.println("Ich schliesse mich "
